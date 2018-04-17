@@ -1,0 +1,4 @@
+{ return(txtime_); }
+
+	static int offset_;	// offset for this header
+	inli

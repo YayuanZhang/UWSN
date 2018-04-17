@@ -1,0 +1,59 @@
+node 1 sendRTS to 0 at 10.000025
+node 2 802_11 recv at 10.012525
+node 0 802_11 recv at 10.016269
+node 0 sendCTS to 1 at 10.032461
+node 1 recvCTS at 10.139272
+node 1 RetransmitRTS at 10.030213
+RetransmitRTS:
+timeout = txtime(phymib_.getRTSlen(), basicRate_)
+getPLCPhdrLen=(PreambleLength + PLCPHeaderLength)/8=0
+plcp_hdr=getPLCPhdrLen*8=0
+((double)plcp_hdr)/phymib_.getPLCPDataRate()
+                                       + (RTSlen-PLCPhdrLen)*8/basicRate_;
+=24*8/1000000 + sizeof(struct rts_frame)*8/basicRate_
+=24*8/1000000+20*8/10000
+=0.01612
+
++DSSS_MaxPropagationDelay  0.000002 2us
+            + phymib_.getSIFS() 0.000100
+            + txtime(phymib_.getCTSlen(), basicRate_)
+            + DSSS_MaxPropagationDelay;
+
+node 0 recvDATA from 1 to -1 at 36.223644
+node 0 rx_resume at 36.223644
+node 0 at 36.223644 navHandler
+UWSink: I get the packet  
+uw_sink: the source is out of scope 0
+UWSink (id:0): I get the packet data no.1 from 1 
+SK 0: Num_Recv 2, InterArrival 19.998800
+
+node 0 recvDATA from 1 to -1 at 16.224844
+node 0 rx_resume at 16.224844
+node 0 at 16.224844 navHandler
+UWSink: I get the packet  
+uw_sink: the source is out of scope 0
+UWSink (id:0): I get the packet data no.0 from 1 
+
+node 0 recvDATA from 2 to 0 at 17.283459
+node 0 sendACK at 17.283459
+
+------------------------------------
+node 0 recvDATA from 1 to 0 at 15.017539
+node 0 sendACK at 15.017539
+node 0 tx_resume at 15.017539
+node 0 setTxState MAC_IDLE at 15.017539
+MAC_802_11: accessing MAC cache_ array out of range (src 1, dst 0, size 0)!
+node 0 rx_resume at 15.017539
+UWSink: I get the packet  
+uw_sink: the source is out of scope 0
+UWSink (id:0): I get the packet data no.0 from 1 
+
+
+
+    if(dst==MAC_BROADCAST)
+    {
+        assert(pktCTRL_);
+        Packet::free(pktCTRL_); pktCTRL_ = 0;
+        mhSend_.stop();
+        return;
+    }
