@@ -1,4 +1,4 @@
-set opt(data_rate)                       0.01
+set opt(data_rate)                       0.005
 set opt(packetsize)                      300
 set opt(packetsize_bct)                  8
 set opt(datarate_bct)                    0.05
@@ -233,8 +233,8 @@ $ns_ attach-agent $node_(3) $a_(3)
 $a_(3) setTargetAddress 12
 $a_(3) attach-vectorbasedforward $opt(width)
 $a_(3) set-range 3500
-$a_(3) set-target-x   -5
-$a_(3) set-target-y   5
+$a_(3) set-target-x   2000
+$a_(3) set-target-y   1000
 $a_(3) set-target-z   0
 $a_(3) set data_rate_  $opt(data_rate)
 $a_(3) set-packetsize $opt(packetsize)
@@ -306,8 +306,8 @@ $ns_ attach-agent $node_(6) $a_(6)
 $a_(6) cmd setTargetAddress 12
 $a_(6) attach-vectorbasedforward $opt(width)
 $a_(6) set-range 3500
-$a_(6) set-target-x   -5
-$a_(6) set-target-y   5
+$a_(6) set-target-x   6000
+$a_(6) set-target-y   1000
 $a_(6) set-target-z   0
 $a_(6) set data_rate_  $opt(data_rate)
 $a_(6) set-packetsize $opt(packetsize)

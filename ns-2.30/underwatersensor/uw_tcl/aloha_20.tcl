@@ -95,7 +95,7 @@ Phy/UnderwaterPhy set setIdlePower 0.2;
 
 
 remove-all-packet-headers 
-add-packet-header Common UWVB UWALOHA LL
+add-packet-header Common UWVB UWALOHA LL Mac
 set ns_ [new Simulator]
 set topo  [new Topography]
 
@@ -488,17 +488,17 @@ $a_(13) set-filename $opt(dataname)
 
 #$ns_ at $start_time "$a_($total_number) cbr-start"
 $ns_ at 15.1 "$a_(0) cbr-start"
-$ns_ at 15.1 "$a_(1) cbr-start"
-$ns_ at 15.1 "$a_(2) cbr-start"
-$ns_ at 15.1 "$a_(3) cbr-start"
-$ns_ at 15.1 "$a_(4) cbr-start"
-$ns_ at 15.1 "$a_(5) cbr-start"
+$ns_ at 17.1 "$a_(1) cbr-start"
+$ns_ at 19.1 "$a_(2) cbr-start"
+$ns_ at 21.1 "$a_(3) cbr-start"
+$ns_ at 23.1 "$a_(4) cbr-start"
+$ns_ at 25.1 "$a_(5) cbr-start"
 $ns_ at 15.1 "$a_(6) cbr-start"
-$ns_ at 15.1 "$a_(7) cbr-start"
-$ns_ at 15.1 "$a_(8) cbr-start"
-$ns_ at 15.1 "$a_(9) cbr-start"
-$ns_ at 15.1 "$a_(10) cbr-start"
-$ns_ at 15.1 "$a_(11) cbr-start"
+$ns_ at 17.1 "$a_(7) cbr-start"
+$ns_ at 19.1 "$a_(8) cbr-start"
+$ns_ at 21.1 "$a_(9) cbr-start"
+$ns_ at 23.1 "$a_(10) cbr-start"
+$ns_ at 25.1 "$a_(11) cbr-start"
 
 
 #$ns_ at 4 "$a_(0) cbr-start"

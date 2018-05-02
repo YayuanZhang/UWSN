@@ -32,11 +32,11 @@ BEGIN {
 	}
      if ($1=="SINK" && $2==13)
 	{       
-		printf("%f ", numsend/1200);
+		printf("%f ", numsend*300*8/1000/2400);
 		printf("%d ", numsend);
                 printf("%d ", numrecv);
 		printf("%f ", cmudelay);
-                printf("%f ", numrecv/1200);
+                printf("%f ", numrecv*300*8/1000/2400);
                 printf("%f ", cmudelay/numrecv);
                 printf("%f ", numrecv/numsend);
 	}

@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0 EPSF-2.0
-%%Title: 2.eps
+%%Title: 4.jpg
 %%Creator: gnuplot 5.0 patchlevel 3
-%%CreationDate: Fri Apr 13 17:13:29 2018
+%%CreationDate: Thu Apr 26 14:36:42 2018
 %%DocumentFonts: (atend)
 %%BoundingBox: 50 50 410 302
 %%EndComments
@@ -464,13 +464,13 @@ systemdict /pdfmark known not {
   userdict /pdfmark systemdict /cleartomark get put
 } if
 SDict begin [
-  /Title (2.eps)
+  /Title (4.jpg)
   /Subject (gnuplot plot)
   /Creator (gnuplot 5.0 patchlevel 3)
   /Author (luviszero)
 %  /Producer (gnuplot)
 %  /Keywords ()
-  /CreationDate (Fri Apr 13 17:13:29 2018)
+  /CreationDate (Thu Apr 26 14:36:42 2018)
   /DOCINFO pdfmark
 end
 } ifelse
@@ -517,774 +517,46 @@ BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 
 1.000 UL
 LTb
 LCb setrgbcolor
-770 308 M
-63 0 V
-6114 0 R
--63 0 V
-stroke
-686 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.1)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-770 878 M
-63 0 V
-6114 0 R
--63 0 V
-stroke
-686 878 M
-[ [(40) 140.0 0.0 true true 0 ( 0.15)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-770 1449 M
-63 0 V
-6114 0 R
--63 0 V
-stroke
-686 1449 M
-[ [(40) 140.0 0.0 true true 0 ( 0.2)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-770 2019 M
-63 0 V
-6114 0 R
--63 0 V
-stroke
-686 2019 M
-[ [(40) 140.0 0.0 true true 0 ( 0.25)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-770 2590 M
-63 0 V
-6114 0 R
--63 0 V
-stroke
-686 2590 M
-[ [(40) 140.0 0.0 true true 0 ( 0.3)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-770 3160 M
-63 0 V
-6114 0 R
--63 0 V
-stroke
-686 3160 M
-[ [(40) 140.0 0.0 true true 0 ( 0.35)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-770 3730 M
-63 0 V
-6114 0 R
--63 0 V
-stroke
-686 3730 M
-[ [(40) 140.0 0.0 true true 0 ( 0.4)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-770 4301 M
-63 0 V
-6114 0 R
--63 0 V
-stroke
-686 4301 M
-[ [(40) 140.0 0.0 true true 0 ( 0.45)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-770 4871 M
-63 0 V
-6114 0 R
--63 0 V
-stroke
-686 4871 M
-[ [(40) 140.0 0.0 true true 0 ( 0.5)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-770 308 M
-0 63 V
-0 4500 R
-0 -63 V
-stroke
-770 168 M
-[ [(40) 140.0 0.0 true true 0 ( 0)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-1388 308 M
-0 63 V
-0 4500 R
-0 -63 V
-stroke
-1388 168 M
-[ [(40) 140.0 0.0 true true 0 ( 0.1)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-2005 308 M
-0 63 V
-0 4500 R
-0 -63 V
-stroke
-2005 168 M
-[ [(40) 140.0 0.0 true true 0 ( 0.2)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-2623 308 M
-0 63 V
-0 4500 R
-0 -63 V
-stroke
-2623 168 M
-[ [(40) 140.0 0.0 true true 0 ( 0.3)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-3241 308 M
-0 63 V
-0 4500 R
-0 -63 V
-stroke
-3241 168 M
-[ [(40) 140.0 0.0 true true 0 ( 0.4)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-3859 308 M
-0 63 V
-0 4500 R
-0 -63 V
-stroke
-3859 168 M
-[ [(40) 140.0 0.0 true true 0 ( 0.5)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-4476 308 M
-0 63 V
-0 4500 R
-0 -63 V
-stroke
-4476 168 M
-[ [(40) 140.0 0.0 true true 0 ( 0.6)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-5094 308 M
-0 63 V
-0 4500 R
-0 -63 V
-stroke
-5094 168 M
-[ [(40) 140.0 0.0 true true 0 ( 0.7)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-5712 308 M
-0 63 V
-0 4500 R
-0 -63 V
-stroke
-5712 168 M
-[ [(40) 140.0 0.0 true true 0 ( 0.8)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-6329 308 M
-0 63 V
-0 4500 R
-0 -63 V
-stroke
-6329 168 M
-[ [(40) 140.0 0.0 true true 0 ( 0.9)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-6947 308 M
-0 63 V
-0 4500 R
-0 -63 V
-stroke
-6947 168 M
-[ [(40) 140.0 0.0 true true 0 ( 1)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-1.000 UL
-LTB
-LCb setrgbcolor
-770 4871 N
-770 308 L
-6177 0 V
-0 4563 V
--6177 0 V
-Z stroke
-1.000 UP
-1.000 UL
-LTb
-LCb setrgbcolor
-LCb setrgbcolor
-112 2589 M
-currentpoint gsave translate -270 rotate 0 0 moveto
-[ [(40) 140.0 0.0 true true 0 (throughput bits/s)]
-] -46.7 MCshow
-grestore
-LTb
-LCb setrgbcolor
-3858 98 M
-[ [(40) 140.0 0.0 true true 0 (overload packet/s)]
-] -46.7 MCshow
-LTb
-% Begin plot #1
-1.000 UP
-7.000 UL
-LTb
-0.34 0.71 0.91 C LCb setrgbcolor
-6506 4738 M
-[ [(0.5) 140.0 0.0 true true 0 (UW802.11)]
-] -46.7 MRshow
-1.000 UP
-7.000 UL
-LTb
-0.34 0.71 0.91 C 6590 4738 M
-189 0 V
-1927 898 M
-1037 432 V
-1023 442 V
-1004 356 V
-987 322 V
-960 165 V
-1927 898 Star
-2964 1330 Star
-3987 1772 Star
-4991 2128 Star
-5978 2450 Star
-6938 2615 Star
-6684 4738 Star
-% End plot #1
-% Begin plot #2
-1.000 UP
-7.000 UL
-LTb
-0.90 0.12 0.06 C LCb setrgbcolor
-6506 4598 M
-[ [(0.5) 140.0 0.0 true true 0 (SFAMA)]
-] -46.7 MRshow
-1.000 UP
-7.000 UL
-LTb
-0.90 0.12 0.06 C 6590 4598 M
-189 0 V
-2252 990 M
-1483 376 V
-1482 76 V
-1483 60 V
-247 -7 V
-2252 990 CircleF
-3735 1366 CircleF
-5217 1442 CircleF
-6700 1502 CircleF
-6684 4598 CircleF
-% End plot #2
-% Begin plot #3
-1.000 UP
-7.000 UL
-LTb
-0.90 0.62 0.00 C LCb setrgbcolor
-6506 4458 M
-[ [(0.5) 140.0 0.0 true true 0 (ALOHA)]
-] -46.7 MRshow
-1.000 UP
-7.000 UL
-LTb
-0.90 0.62 0.00 C 6590 4458 M
-189 0 V
-2252 403 M
-3735 1877 L
-5217 3236 L
-6700 4538 L
-247 225 V
-2252 403 Box
-3735 1877 Box
-5217 3236 Box
-6700 4538 Box
-6684 4458 Box
-% End plot #3
-2.000 UL
-LTb
-LCb setrgbcolor
-1.000 UL
-LTB
-LCb setrgbcolor
-770 4871 N
-770 308 L
-6177 0 V
-0 4563 V
--6177 0 V
-Z stroke
-1.000 UP
-1.000 UL
-LTb
-LCb setrgbcolor
-stroke
-grestore
-end
-showpage
-%%Page: 2 2
-gnudict begin
-gsave
-doclip
-50 50 translate
-0.050 0.050 scale
-0 setgray
-newpath
-(Helvetica) findfont 140 scalefont setfont
-BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 7200.00 5040.00 BoxColFill} if
-1.000 UL
-LTb
-LCb setrgbcolor
 686 448 M
 63 0 V
 6198 0 R
 -63 0 V
 stroke
 602 448 M
-[ [(40) 140.0 0.0 true true 0 ( 0)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 939 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 939 M
-[ [(40) 140.0 0.0 true true 0 ( 100)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 1431 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 1431 M
-[ [(40) 140.0 0.0 true true 0 ( 200)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 1922 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 1922 M
-[ [(40) 140.0 0.0 true true 0 ( 300)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 2414 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 2414 M
-[ [(40) 140.0 0.0 true true 0 ( 400)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 2905 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 2905 M
-[ [(40) 140.0 0.0 true true 0 ( 500)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 3397 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 3397 M
-[ [(40) 140.0 0.0 true true 0 ( 600)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 3888 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 3888 M
-[ [(40) 140.0 0.0 true true 0 ( 700)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 4380 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 4380 M
-[ [(40) 140.0 0.0 true true 0 ( 800)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 4871 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 4871 M
-[ [(40) 140.0 0.0 true true 0 ( 900)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-686 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-1312 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-1312 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.1)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-1938 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-1938 308 M
 [ [(40) 140.0 0.0 true true 0 ( 0.2)]
-] -46.7 MCshow
+] -46.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-2564 448 M
-0 63 V
-0 4360 R
-0 -63 V
+686 1001 M
+63 0 V
+6198 0 R
+-63 0 V
 stroke
-2564 308 M
+602 1001 M
 [ [(40) 140.0 0.0 true true 0 ( 0.3)]
-] -46.7 MCshow
+] -46.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-3190 448 M
-0 63 V
-0 4360 R
-0 -63 V
+686 1554 M
+63 0 V
+6198 0 R
+-63 0 V
 stroke
-3190 308 M
+602 1554 M
 [ [(40) 140.0 0.0 true true 0 ( 0.4)]
-] -46.7 MCshow
+] -46.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-3817 448 M
-0 63 V
-0 4360 R
-0 -63 V
+686 2107 M
+63 0 V
+6198 0 R
+-63 0 V
 stroke
-3817 308 M
+602 2107 M
 [ [(40) 140.0 0.0 true true 0 ( 0.5)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-4443 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-4443 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.6)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-5069 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-5069 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.7)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-5695 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-5695 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.8)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-6321 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-6321 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.9)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-6947 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-6947 308 M
-[ [(40) 140.0 0.0 true true 0 ( 1)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-1.000 UL
-LTB
-LCb setrgbcolor
-686 4871 N
-686 448 L
-6261 0 V
-0 4423 V
--6261 0 V
-Z stroke
-1.000 UP
-1.000 UL
-LTb
-LCb setrgbcolor
-LCb setrgbcolor
-112 2659 M
-currentpoint gsave translate -270 rotate 0 0 moveto
-[ [(40) 140.0 0.0 true true 0 (average end-to-end delay/s)]
-] -46.7 MCshow
-grestore
-LTb
-LCb setrgbcolor
-3816 98 M
-[ [(40) 140.0 0.0 true true 0 (overload packet/s)]
-] -46.7 MCshow
-LTb
-% Begin plot #1
-1.000 UP
-7.000 UL
-LTb
-0.34 0.71 0.91 C LCb setrgbcolor
-6506 4738 M
-[ [(0.5) 140.0 0.0 true true 0 (UW802.11)]
-] -46.7 MRshow
-1.000 UP
-7.000 UL
-LTb
-0.34 0.71 0.91 C 6590 4738 M
-189 0 V
-1859 648 M
-1051 747 V
-1036 377 V
-1019 416 V
-1000 295 V
-973 206 V
-1859 648 Star
-2910 1395 Star
-3946 1772 Star
-4965 2188 Star
-5965 2483 Star
-6938 2689 Star
-6684 4738 Star
-% End plot #1
-% Begin plot #2
-1.000 UP
-7.000 UL
-LTb
-0.90 0.12 0.06 C LCb setrgbcolor
-6506 4598 M
-[ [(0.5) 140.0 0.0 true true 0 (SFAMA)]
-] -46.7 MRshow
-1.000 UP
-7.000 UL
-LTb
-0.90 0.12 0.06 C 6590 4598 M
-189 0 V
-2189 2264 M
-3691 3408 L
-1503 932 V
-1503 371 V
-250 66 V
-2189 2264 CircleF
-3691 3408 CircleF
-5194 4340 CircleF
-6697 4711 CircleF
-6684 4598 CircleF
-% End plot #2
-% Begin plot #3
-1.000 UP
-7.000 UL
-LTb
-0.90 0.62 0.00 C LCb setrgbcolor
-6506 4458 M
-[ [(0.5) 140.0 0.0 true true 0 (ALOHA)]
-] -46.7 MRshow
-1.000 UP
-7.000 UL
-LTb
-0.90 0.62 0.00 C 6590 4458 M
-189 0 V
-2189 454 M
-1502 0 V
-1503 0 V
-1503 0 V
-250 0 V
-2189 454 Box
-3691 454 Box
-5194 454 Box
-6697 454 Box
-6684 4458 Box
-% End plot #3
-2.000 UL
-LTb
-LCb setrgbcolor
-1.000 UL
-LTB
-LCb setrgbcolor
-686 4871 N
-686 448 L
-6261 0 V
-0 4423 V
--6261 0 V
-Z stroke
-1.000 UP
-1.000 UL
-LTb
-LCb setrgbcolor
-stroke
-grestore
-end
-showpage
-%%Page: 3 3
-gnudict begin
-gsave
-doclip
-50 50 translate
-0.050 0.050 scale
-0 setgray
-newpath
-(Helvetica) findfont 140 scalefont setfont
-BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 7200.00 5040.00 BoxColFill} if
-1.000 UL
-LTb
-LCb setrgbcolor
-686 448 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 448 M
-[ [(40) 140.0 0.0 true true 0 ( 0)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 890 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 890 M
-[ [(40) 140.0 0.0 true true 0 ( 0.1)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 1333 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 1333 M
-[ [(40) 140.0 0.0 true true 0 ( 0.2)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 1775 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 1775 M
-[ [(40) 140.0 0.0 true true 0 ( 0.3)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 2217 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 2217 M
-[ [(40) 140.0 0.0 true true 0 ( 0.4)]
 ] -46.7 MRshow
 1.000 UL
 LTb
@@ -1295,50 +567,39 @@ LCb setrgbcolor
 -63 0 V
 stroke
 602 2660 M
-[ [(40) 140.0 0.0 true true 0 ( 0.5)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 3102 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 3102 M
 [ [(40) 140.0 0.0 true true 0 ( 0.6)]
 ] -46.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-686 3544 M
+686 3212 M
 63 0 V
 6198 0 R
 -63 0 V
 stroke
-602 3544 M
+602 3212 M
 [ [(40) 140.0 0.0 true true 0 ( 0.7)]
 ] -46.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-686 3986 M
+686 3765 M
 63 0 V
 6198 0 R
 -63 0 V
 stroke
-602 3986 M
+602 3765 M
 [ [(40) 140.0 0.0 true true 0 ( 0.8)]
 ] -46.7 MRshow
 1.000 UL
 LTb
 LCb setrgbcolor
-686 4429 M
+686 4318 M
 63 0 V
 6198 0 R
 -63 0 V
 stroke
-602 4429 M
+602 4318 M
 [ [(40) 140.0 0.0 true true 0 ( 0.9)]
 ] -46.7 MRshow
 1.000 UL
@@ -1361,51 +622,40 @@ LCb setrgbcolor
 0 -63 V
 stroke
 686 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0)]
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
 ] -46.7 MCshow
 1.000 UL
 LTb
 LCb setrgbcolor
-1312 448 M
+1469 448 M
 0 63 V
 0 4360 R
 0 -63 V
 stroke
-1312 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.1)]
+1469 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.05)]
 ] -46.7 MCshow
 1.000 UL
 LTb
 LCb setrgbcolor
-1938 448 M
+2251 448 M
 0 63 V
 0 4360 R
 0 -63 V
 stroke
-1938 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.2)]
+2251 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.1)]
 ] -46.7 MCshow
 1.000 UL
 LTb
 LCb setrgbcolor
-2564 448 M
+3034 448 M
 0 63 V
 0 4360 R
 0 -63 V
 stroke
-2564 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.3)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-3190 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-3190 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.4)]
+3034 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.15)]
 ] -46.7 MCshow
 1.000 UL
 LTb
@@ -1416,51 +666,40 @@ LCb setrgbcolor
 0 -63 V
 stroke
 3817 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.5)]
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.2)]
 ] -46.7 MCshow
 1.000 UL
 LTb
 LCb setrgbcolor
-4443 448 M
+4599 448 M
 0 63 V
 0 4360 R
 0 -63 V
 stroke
-4443 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.6)]
+4599 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.25)]
 ] -46.7 MCshow
 1.000 UL
 LTb
 LCb setrgbcolor
-5069 448 M
+5382 448 M
 0 63 V
 0 4360 R
 0 -63 V
 stroke
-5069 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.7)]
+5382 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.3)]
 ] -46.7 MCshow
 1.000 UL
 LTb
 LCb setrgbcolor
-5695 448 M
+6164 448 M
 0 63 V
 0 4360 R
 0 -63 V
 stroke
-5695 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.8)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-6321 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-6321 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.9)]
+6164 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.35)]
 ] -46.7 MCshow
 1.000 UL
 LTb
@@ -1471,7 +710,7 @@ LCb setrgbcolor
 0 -63 V
 stroke
 6947 308 M
-[ [(40) 140.0 0.0 true true 0 ( 1)]
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.4)]
 ] -46.7 MCshow
 1.000 UL
 LTb
@@ -1498,459 +737,346 @@ grestore
 LTb
 LCb setrgbcolor
 3816 98 M
-[ [(40) 140.0 0.0 true true 0 (overload packet/s)]
+[ [(40) 140.0 0.0 true true 0 (generating rate per node pkt/s)]
 ] -46.7 MCshow
 LTb
 % Begin plot #1
-1.000 UP
 7.000 UL
 LTb
-0.34 0.71 0.91 C LCb setrgbcolor
+0.58 0.00 0.83 C LCb setrgbcolor
 6506 4738 M
 [ [(0.5) 140.0 0.0 true true 0 (UW802.11)]
 ] -46.7 MRshow
-1.000 UP
 7.000 UL
 LTb
-0.34 0.71 0.91 C 6590 4738 M
+0.58 0.00 0.83 C 6590 4738 M
 189 0 V
-1859 4031 M
-2910 2808 L
-3946 2387 L
-4965 2128 L
-5965 1958 L
-973 -171 V
-1859 4031 Star
-2910 2808 Star
-3946 2387 Star
-4965 2128 Star
-5965 1958 Star
-6938 1787 Star
-6684 4738 Star
+874 3844 M
+47 26 V
+48 35 V
+47 40 V
+48 40 V
+47 40 V
+47 40 V
+48 39 V
+47 39 V
+48 37 V
+48 37 V
+47 35 V
+48 35 V
+49 32 V
+48 31 V
+49 28 V
+50 25 V
+50 22 V
+51 18 V
+52 15 V
+52 10 V
+53 7 V
+54 3 V
+55 -2 V
+56 -6 V
+56 -10 V
+57 -14 V
+58 -18 V
+58 -22 V
+59 -25 V
+60 -29 V
+60 -32 V
+60 -36 V
+61 -38 V
+61 -41 V
+61 -43 V
+61 -45 V
+61 -47 V
+61 -48 V
+62 -50 V
+61 -51 V
+61 -52 V
+61 -52 V
+61 -53 V
+60 -53 V
+61 -53 V
+60 -53 V
+60 -53 V
+60 -53 V
+60 -52 V
+59 -52 V
+59 -51 V
+59 -50 V
+59 -50 V
+59 -49 V
+58 -48 V
+59 -48 V
+57 -46 V
+58 -46 V
+57 -44 V
+57 -44 V
+56 -43 V
+56 -41 V
+55 -41 V
+55 -39 V
+55 -39 V
+54 -37 V
+54 -36 V
+53 -35 V
+53 -34 V
+53 -33 V
+52 -32 V
+53 -31 V
+52 -29 V
+52 -30 V
+53 -28 V
+53 -27 V
+53 -27 V
+54 -26 V
+55 -25 V
+55 -25 V
+56 -24 V
+56 -24 V
+58 -23 V
+57 -23 V
+59 -22 V
+58 -23 V
+59 -21 V
+59 -22 V
+58 -21 V
+58 -20 V
+56 -20 V
+56 -19 V
+54 -19 V
+52 -18 V
+51 -17 V
+49 -17 V
+49 -16 V
+47 -17 V
+48 -16 V
 % End plot #1
 % Begin plot #2
-1.000 UP
-7.000 UL
+stroke
 LTb
-0.90 0.12 0.06 C LCb setrgbcolor
+0.00 0.62 0.45 C LCb setrgbcolor
 6506 4598 M
 [ [(0.5) 140.0 0.0 true true 0 (SFAMA)]
 ] -46.7 MRshow
-1.000 UP
 7.000 UL
 LTb
-0.90 0.12 0.06 C 6590 4598 M
+0.00 0.62 0.45 C 6590 4598 M
 189 0 V
-2189 3392 M
-3691 2224 L
-5194 1673 L
-6697 1391 L
-250 -34 V
-2189 3392 CircleF
-3691 2224 CircleF
-5194 1673 CircleF
-6697 1391 CircleF
-6684 4598 CircleF
+874 2260 M
+47 173 V
+48 144 V
+47 122 V
+48 105 V
+47 92 V
+47 81 V
+48 72 V
+47 63 V
+48 57 V
+48 49 V
+47 43 V
+48 37 V
+49 31 V
+48 26 V
+49 19 V
+50 14 V
+50 8 V
+51 2 V
+52 -3 V
+52 -8 V
+53 -13 V
+54 -18 V
+55 -23 V
+56 -27 V
+56 -31 V
+57 -35 V
+58 -38 V
+58 -42 V
+59 -43 V
+60 -47 V
+60 -48 V
+60 -49 V
+61 -51 V
+61 -52 V
+61 -52 V
+61 -53 V
+61 -53 V
+61 -53 V
+62 -52 V
+61 -52 V
+61 -51 V
+61 -50 V
+61 -49 V
+60 -49 V
+61 -47 V
+60 -46 V
+60 -45 V
+60 -45 V
+60 -43 V
+59 -42 V
+59 -41 V
+59 -40 V
+59 -39 V
+59 -39 V
+58 -37 V
+59 -37 V
+57 -36 V
+58 -35 V
+57 -34 V
+57 -33 V
+56 -33 V
+56 -32 V
+55 -31 V
+55 -30 V
+55 -29 V
+54 -29 V
+54 -28 V
+53 -27 V
+53 -26 V
+53 -25 V
+52 -25 V
+53 -24 V
+52 -24 V
+52 -23 V
+53 -23 V
+53 -23 V
+53 -22 V
+54 -22 V
+55 -22 V
+55 -22 V
+56 -22 V
+56 -22 V
+58 -22 V
+57 -23 V
+59 -22 V
+58 -21 V
+59 -22 V
+59 -21 V
+58 -21 V
+58 -19 V
+56 -19 V
+56 -17 V
+54 -15 V
+52 -13 V
+51 -11 V
+49 -9 V
+49 -7 V
+47 -5 V
+48 -4 V
 % End plot #2
 % Begin plot #3
-1.000 UP
-7.000 UL
-LTb
-0.90 0.62 0.00 C LCb setrgbcolor
-6506 4458 M
-[ [(0.5) 140.0 0.0 true true 0 (ALOHA)]
-] -46.7 MRshow
-1.000 UP
-7.000 UL
-LTb
-0.90 0.62 0.00 C 6590 4458 M
-189 0 V
-2189 2444 M
-1502 192 V
-1503 3 V
-1503 -22 V
-250 1 V
-2189 2444 Box
-3691 2636 Box
-5194 2639 Box
-6697 2617 Box
-6684 4458 Box
-% End plot #3
-2.000 UL
-LTb
-LCb setrgbcolor
-1.000 UL
-LTB
-LCb setrgbcolor
-686 4871 N
-686 448 L
-6261 0 V
-0 4423 V
--6261 0 V
-Z stroke
-1.000 UP
-1.000 UL
-LTb
-LCb setrgbcolor
 stroke
-grestore
-end
-showpage
-%%Page: 4 4
-gnudict begin
-gsave
-doclip
-50 50 translate
-0.050 0.050 scale
-0 setgray
-newpath
-(Helvetica) findfont 140 scalefont setfont
-BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 7200.00 5040.00 BoxColFill} if
-1.000 UL
-LTb
-LCb setrgbcolor
-686 448 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 448 M
-[ [(40) 140.0 0.0 true true 0 ( 0)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 890 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 890 M
-[ [(40) 140.0 0.0 true true 0 ( 40)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 1333 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 1333 M
-[ [(40) 140.0 0.0 true true 0 ( 80)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 1775 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 1775 M
-[ [(40) 140.0 0.0 true true 0 ( 120)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 2217 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 2217 M
-[ [(40) 140.0 0.0 true true 0 ( 160)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 2660 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 2660 M
-[ [(40) 140.0 0.0 true true 0 ( 200)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 3102 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 3102 M
-[ [(40) 140.0 0.0 true true 0 ( 240)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 3544 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 3544 M
-[ [(40) 140.0 0.0 true true 0 ( 280)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 3986 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 3986 M
-[ [(40) 140.0 0.0 true true 0 ( 320)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 4429 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 4429 M
-[ [(40) 140.0 0.0 true true 0 ( 360)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 4871 M
-63 0 V
-6198 0 R
--63 0 V
-stroke
-602 4871 M
-[ [(40) 140.0 0.0 true true 0 ( 400)]
-] -46.7 MRshow
-1.000 UL
-LTb
-LCb setrgbcolor
-686 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-686 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-1312 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-1312 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.1)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-1938 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-1938 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.2)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-2564 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-2564 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.3)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-3190 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-3190 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.4)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-3817 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-3817 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.5)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-4443 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-4443 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.6)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-5069 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-5069 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.7)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-5695 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-5695 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.8)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-6321 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-6321 308 M
-[ [(40) 140.0 0.0 true true 0 ( 0.9)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-6947 448 M
-0 63 V
-0 4360 R
-0 -63 V
-stroke
-6947 308 M
-[ [(40) 140.0 0.0 true true 0 ( 1)]
-] -46.7 MCshow
-1.000 UL
-LTb
-LCb setrgbcolor
-1.000 UL
-LTB
-LCb setrgbcolor
-686 4871 N
-686 448 L
-6261 0 V
-0 4423 V
--6261 0 V
-Z stroke
-1.000 UP
-1.000 UL
-LTb
-LCb setrgbcolor
-LCb setrgbcolor
-112 2659 M
-currentpoint gsave translate -270 rotate 0 0 moveto
-[ [(40) 140.0 0.0 true true 0 (average energy consumption J/packet)]
-] -46.7 MCshow
-grestore
-LTb
-LCb setrgbcolor
-3816 98 M
-[ [(40) 140.0 0.0 true true 0 (overload packet/s)]
-] -46.7 MCshow
-LTb
-% Begin plot #1
-1.000 UP
-7.000 UL
 LTb
 0.34 0.71 0.91 C LCb setrgbcolor
-6506 4738 M
-[ [(0.5) 140.0 0.0 true true 0 (UW802.11)]
-] -46.7 MRshow
-1.000 UP
-7.000 UL
-LTb
-0.34 0.71 0.91 C 6590 4738 M
-189 0 V
-1859 2971 M
-1051 327 V
-3946 3013 L
-4965 2830 L
-5965 2693 L
-973 -64 V
-1859 2971 Star
-2910 3298 Star
-3946 3013 Star
-4965 2830 Star
-5965 2693 Star
-6938 2629 Star
-6684 4738 Star
-% End plot #1
-% Begin plot #2
-1.000 UP
-7.000 UL
-LTb
-0.90 0.12 0.06 C LCb setrgbcolor
-6506 4598 M
-[ [(0.5) 140.0 0.0 true true 0 (SFAMA)]
-] -46.7 MRshow
-1.000 UP
-7.000 UL
-LTb
-0.90 0.12 0.06 C 6590 4598 M
-189 0 V
-2189 2078 M
-1502 -94 V
-1503 -16 V
-1503 -13 V
-250 2 V
-2189 2078 CircleF
-3691 1984 CircleF
-5194 1968 CircleF
-6697 1955 CircleF
-6684 4598 CircleF
-% End plot #2
-% Begin plot #3
-1.000 UP
-7.000 UL
-LTb
-0.90 0.62 0.00 C LCb setrgbcolor
 6506 4458 M
 [ [(0.5) 140.0 0.0 true true 0 (ALOHA)]
 ] -46.7 MRshow
-1.000 UP
 7.000 UL
 LTb
-0.90 0.62 0.00 C 6590 4458 M
+0.34 0.71 0.91 C 6590 4458 M
 189 0 V
-2189 1117 M
-3691 797 L
-5194 710 L
-6697 669 L
-250 -4 V
-2189 1117 Box
-3691 797 Box
-5194 710 Box
-6697 669 Box
-6684 4458 Box
+874 1492 M
+47 32 V
+48 21 V
+47 14 V
+48 9 V
+47 7 V
+47 5 V
+48 3 V
+47 3 V
+48 2 V
+48 2 V
+47 2 V
+48 1 V
+49 2 V
+48 1 V
+49 1 V
+50 0 V
+50 1 V
+51 1 V
+52 1 V
+52 0 V
+53 1 V
+54 1 V
+55 1 V
+56 0 V
+56 1 V
+57 1 V
+58 1 V
+58 1 V
+59 1 V
+60 2 V
+60 1 V
+60 2 V
+61 1 V
+61 2 V
+61 2 V
+61 2 V
+61 2 V
+61 2 V
+62 2 V
+61 2 V
+61 2 V
+61 1 V
+61 2 V
+60 2 V
+61 1 V
+60 2 V
+60 1 V
+60 1 V
+60 1 V
+59 1 V
+59 0 V
+59 1 V
+59 0 V
+59 0 V
+58 0 V
+59 0 V
+57 0 V
+58 0 V
+57 0 V
+57 -1 V
+56 0 V
+56 -1 V
+55 0 V
+55 0 V
+55 -1 V
+54 0 V
+54 0 V
+53 0 V
+53 0 V
+53 0 V
+52 0 V
+53 0 V
+52 1 V
+52 0 V
+53 1 V
+53 0 V
+53 1 V
+54 0 V
+55 1 V
+55 0 V
+56 0 V
+56 0 V
+58 0 V
+57 0 V
+59 0 V
+58 0 V
+59 -1 V
+59 -1 V
+58 -1 V
+58 0 V
+56 -1 V
+56 -1 V
+54 0 V
+52 0 V
+51 1 V
+49 1 V
+49 1 V
+47 2 V
+48 2 V
 % End plot #3
+stroke
 2.000 UL
 LTb
 LCb setrgbcolor
