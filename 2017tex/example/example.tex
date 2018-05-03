@@ -1,6 +1,7 @@
+
 \documentclass[12pt,a4paper,openany,oneside]{book}
 
-\input{thesis-setting}
+\input{thesis-setting.tex}
 
 % 仅用于测试
 \usepackage{blindtext}
@@ -23,16 +24,16 @@
 \renewcommand{\baselinestretch}{1.25}
 
 % 中文摘要
-\include{preface/c_abstract}
+\include{preface/c_abstract.tex}
 % 英文摘要
-\include{preface/e_abstract}
+\include{preface/e_abstract.tex}
 
 \renewcommand{\baselinestretch}{1.25}
 \fontsize{12pt}{12pt}\selectfont
-\phantomsection
-\addcontentsline{toc}{chapter}{\fHei 目录}
+%\phantomsection
+%\addcontentsline{toc}{chapter}{\fHei 目录}
 \tableofcontents
-\clearpage
+
 \mainmatter
 
 \renewcommand{\baselinestretch}{1.0}

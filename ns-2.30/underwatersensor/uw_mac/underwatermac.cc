@@ -403,7 +403,7 @@ return;}
 
 double UnderwaterMac::getTxTime(int pkt_len) {
 	UnderwaterPhy* phy = (UnderwaterPhy*)netif_;
-   // printf("bit_rate_, %f\n",bit_rate_);
+    printf("pkt_len %d bit_rate_, %f\n",pkt_len,bit_rate_);
 	return phy->sync_hdr_len()+ pkt_len*8*encoding_efficiency_/bit_rate_;
 }
 

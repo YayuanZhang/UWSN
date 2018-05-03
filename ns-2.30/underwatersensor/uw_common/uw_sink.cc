@@ -210,8 +210,8 @@ void UWSinkAgent::timeout(int)
        if(!node->ismobile)
    {
        double sendtime=NOW-NrtMb_time;
-       printf("sendtime %lf \n",sendtime);
-       if (sendtime>4*interval_)
+       printf("sendtime %lf interal %lf \n",sendtime,4*interval_);
+       if (sendtime>0.4*interval_)
        {
          running_=0;
          printf("node %d stop at %lf\n",here_.addr_,NOW);

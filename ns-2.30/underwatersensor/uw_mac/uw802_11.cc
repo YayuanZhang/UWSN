@@ -81,6 +81,7 @@ Macuw802_11::transmit(Packet *p, double timeout)
         assert(pktRx_);
         struct hdr_cmn *ch = HDR_CMN(pktRx_);
         ch->error() = 1;        /* force packet discard */
+        printf("rx_state_ != MAC_IDLE\n");
     }
 
     /*
@@ -176,8 +177,8 @@ PHY_MIB::PHY_MIB(Macuw802_11 *parent)
     parent->bind("PreambleLength_", &PreambleLength);
     parent->bind("PLCPHeaderLength_", &PLCPHeaderLength);
     parent->bind_bw("PLCPDataRate_", &PLCPDataRate);
-    SlotTime=0.02;//0.0002
-    SIFSTime=0.01;//0.0001
+    SlotTime=0.2;//0.0002
+    SIFSTime=0.1;//0.0001
     //printf("bind PreambleLength %lf\n",PreambleLength);
     //printf("bind PLCPHeaderLength %lf\n",PLCPHeaderLength);
     //printf("bind PLCPDataRate %lf\n",PLCPDataRate);
@@ -763,6 +764,7 @@ Macuw802_11::check_pktCTRL()
     case MAC_Subtype_CTS:
         if(!is_idle()) {
             discard(pktCTRL_, DROP_MAC_BUSY); pktCTRL_ = 0;
+            printf("discard CTS\n");
             return 0;
         }
         printf("node %d setTxState MAC_CTS at %lf\n",index_,NOW);
@@ -1112,9 +1114,7 @@ Macuw802_11::sendDATA(Packet *p)
 void
 Macuw802_11::RetransmitRTS()
 {
-   #ifdef DEBUG_LUV
     printf("node %d RetransmitRTS at %lf\n",index_,NOW);
-    #endif
     assert(pktTx_);
     assert(pktRTS_);
     assert(mhBackoff_.busy() == 0);
@@ -1159,9 +1159,7 @@ Macuw802_11::RetransmitRTS()
 void
 Macuw802_11::RetransmitDATA()
 {
-#ifdef DEBUG_LUV
-      printf("node %d RetransmitDATA at %lf\n",index_,NOW);
-  #endif
+    printf("node %d RetransmitDATA at %lf\n",index_,NOW);
     struct hdr_cmn *ch;
     struct hdr_macuw802_11 *mh;
     u_int32_t *rcount, thresh;
@@ -1591,9 +1589,7 @@ Macuw802_11::txtime(double psz, double drt)
 void
 Macuw802_11::recvCTS(Packet *p)
 {
-    #ifdef DEBUG_LUV
-    printf("node %d recvCTS at %lf\n",index_,NOW);
-    #endif
+
     printf("node %d recvCTS at %lf\n",index_,NOW);
     if(tx_state_ != MAC_RTS) {
         #ifdef DEBUG_LUV
@@ -1602,9 +1598,6 @@ Macuw802_11::recvCTS(Packet *p)
         discard(p, DROP_MAC_INVALID_STATE);
         return;
     }
-    #ifdef DEBUG_LUV
-    printf("acceptCTS\n");
-    #endif
     printf("acceptCTS\n");
     assert(pktRTS_);
     Packet::free(pktRTS_); pktRTS_ = 0;
@@ -1619,9 +1612,7 @@ Macuw802_11::recvCTS(Packet *p)
      * reset the ssrc_, but not the congestion window.
      */
     ssrc_ = 0;
-    #ifdef DEBUG_LUV
     printf("tx_resume before\n");
-   #endif
     tx_resume();
 
     mac_log(p);

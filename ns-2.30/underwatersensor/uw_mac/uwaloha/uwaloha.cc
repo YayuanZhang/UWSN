@@ -103,7 +103,7 @@ void UWALOHA_CallBackHandler::handle(Event* e)
 void UWALOHA::StatusProcess(bool is_ack)
 {
 	UnderwaterSensorNode* n=(UnderwaterSensorNode*) node_;
-	n->SetTransmissionStatus(IDLE);
+    n->SetTransmissionStatus(IDLEE);
 	
 	if( blocked ) {
 		blocked = false;
@@ -136,8 +136,9 @@ void UWALOHA::TxProcess(Packet* pkt)
 
 	hdr_cmn* cmh = HDR_CMN(pkt);
 	hdr_UWALOHA* UWALOHAh = hdr_UWALOHA::access(pkt);
-	cmh->size() += hdr_UWALOHA::size();
+    cmh->size() += hdr_UWALOHA::size();
 	cmh->txtime() = getTxTime(cmh->size());
+    printf("txtime %lf\n",cmh->txtime());
 	cmh->error() = 0;
 	cmh->direction() = hdr_cmn::DOWN;
 
@@ -204,9 +205,9 @@ void UWALOHA::sendPkt(Packet *pkt)
 		case SLEEP:
 			Poweron();
 			
-		case IDLE:
+        case IDLEE:
 		  
-			n->SetTransmissionStatus(SEND); 
+            n->SetTransmissionStatus(SENDE);
 			cmh->timestamp() = NOW;//why?
 			cmh->direction() = hdr_cmn::DOWN;
 			
@@ -233,7 +234,7 @@ void UWALOHA::sendPkt(Packet *pkt)
 			s.schedule(&status_handler,&status_event,txtime+0.01);
 			break;
 			
-		case RECV:
+        case RECVE:
 			printf("RECV-SEND Collision!!!!!\n");
 			if( UWALOHAh->packet_type == hdr_UWALOHA::ACK ) 
 				retryACK(pkt);
