@@ -84,12 +84,17 @@
 \usepackage{fontspec}
 \usepackage[SlantFont,BoldFont,CJKchecksingle,CJKnumber]{xeCJK}
 % 使用 Adobe 字体
-\newcommand\adobeSog{Adobe Song Std}
-\newcommand\adobeHei{Adobe Heiti Std}
-\newcommand\adobeKai{Adobe Kaiti Std}
-\newcommand\adobeFag{Adobe Fangsong Std}
-\newcommand\codeFont{Consolas}
+%\newcommand\adobeSog{Adobe Song Std}
+%\newcommand\adobeHei{Adobe Heiti Std}
+%\newcommand\adobeKai{Adobe Kaiti Std}
+%\newcommand\adobeFag{Adobe Fangsong Std}
+%\newcommand\codeFont{Consolas}
 % 设置字体
+
+\setmainfont{Times New Roman}
+\setsansfont{Times New Roman}
+\setmonofont{Times New Roman}
+
 \defaultfontfeatures{Mapping=tex-text}
 %\setCJKmainfont[ItalicFont=\adobeKai, BoldFont=\adobeHei]{\adobeSog}
 %\setCJKsansfont[ItalicFont=\adobeKai, BoldFont=\adobeHei]{\adobeSog}
@@ -97,7 +102,7 @@
 \setCJKmainfont{SimSun}    % 宋体  
 \setCJKsansfont{SimHei}
 \setCJKmonofont{FangSong_GB2312}
-\setmonofont{\codeFont}
+
 % 设置字体族
 %\setCJKfamilyfont{song}{\adobeSog}      % 宋体  
 %\setCJKfamilyfont{hei}{\adobeHei}       % 黑体  
@@ -185,6 +190,9 @@
 %     {\thesubsubsection }{0.5em}{}{}
 % 正文中标题格式，需要标号
 
+%\renewcommand{\thechapter}{第{\arabic{chapter}}章}
+%\newcommand\chapterID[1]{第\CJKnumber{#1}章}
+\usepackage{CJKnumb}
 \newcommand\chapterID[1]{第\CJKnumber{#1}章}
 \renewcommand{\chaptername}{第\CJKnumber{\thechapter}章}
 \renewcommand{\figurename}{图}
