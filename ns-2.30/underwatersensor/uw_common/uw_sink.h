@@ -1,9 +1,9 @@
-
 #ifndef ns_uw_sink_h
 #define ns_uw_sink_h
 
 #include <tcl.h>
-//#include <hash_map>
+#include <hash_map>
+#include <algorithm>
 
 #include "agent.h"
 #include "tclcl.h"
@@ -15,7 +15,7 @@
 
 #include <set>
 using namespace std;
-//using namespace __gnu_cxx;
+using namespace __gnu_cxx;
 
 
 
@@ -138,8 +138,12 @@ and 0 is active.*/
   double last_arrival_time;
 
   UW_Hash_Table  DataTable;
-  //hash_map<int,double> MbnodeHash;
-  
+  hash_map<int,double> MbnodeHash;
+  vector<pair<int, double> > MbnodeMap;
+  static int cmp(const pair<int, double> &x, const pair<int, double> &y)
+   {
+      return x.second > y.second;
+    }
  int NrtMb_ID;
  double NrtMb_RxPr;
  double NrtMb_time;
@@ -166,6 +170,7 @@ and 0 is active.*/
   double explore_interval;
   double data_interval;
   double  data_rate_;
+  double  datarate_bct;
 
   int mactype_;//1 802_11 2sfama
   int packetsize_;  // # of bytes in the packet

@@ -129,8 +129,8 @@ struct hdr_mac802_11 {
  * calculating tx timeouts (as set in tcl/lan/ns-mac.tcl).
  *   -- Gavin Holland, March 2002
  */
-#define DSSS_MaxPropagationDelay        0.000002        // 2us   XXXX
-
+//#define DSSS_MaxPropagationDelay        0.000002        // 2us   XXXX
+//int DSSS_MaxPropagationDelay=0.000002;
 class PHY_MIB {
 public:
 	PHY_MIB(Mac802_11 *parent);
@@ -366,7 +366,8 @@ protected:
 private:
 	double		basicRate_;
  	double		dataRate_;
-	
+    int DSSS_MaxPropagationDelay=0.000002;
+
 	/*
 	 * Mac Timers
 	 */

@@ -877,7 +877,7 @@ TMac::TxND(Packet* pkt, double window)
 
   if(SLEEP==n->TransmissionStatus()) {
   Poweron();
-  n->SetTransmissionStatus(SEND);
+  n->SetTransmissionStatus(SENDE);
   cmh->ts_=NOW;
 
   if(PhaseStatus==PHASETWO){
@@ -898,7 +898,7 @@ TMac::TxND(Packet* pkt, double window)
 
   if(IDLEE==n->TransmissionStatus()){
   
-  n->SetTransmissionStatus(SEND);
+  n->SetTransmissionStatus(SENDE);
  
   //printf("TxND the data type is %d\n",MAC_BROADCAST);
   //printf("broadcast : I am going to send the packet down tx is %f\n",txtime);
@@ -941,7 +941,7 @@ TMac::TxND(Packet* pkt, double window)
 
     }
 
-if (SEND==n->TransmissionStatus())
+if (SENDE==n->TransmissionStatus())
 {
   // this case is supposed not to  happen 
     printf("rmac: queue send data too fas\n");
@@ -1326,7 +1326,7 @@ TMac::TxRTS(Event* e,int receiver_addr)
 
          if(IDLEE==status){
   
-            n->SetTransmissionStatus(SEND);
+            n->SetTransmissionStatus(SENDE);
  
               cmh->ts_=NOW;
              sendDown(pkt);
@@ -1356,7 +1356,7 @@ TMac::TxRTS(Event* e,int receiver_addr)
      return;
     }
 
-if (SEND==status)
+if (SENDE==status)
   {
     printf("tmac: queue send data too fast\n");
     Packet::free(pkt);
@@ -1787,7 +1787,7 @@ TMac::TxCTS(Packet *p)
          if(IDLEE==status){
            
 
-            n->SetTransmissionStatus(SEND);
+            n->SetTransmissionStatus(SENDE);
  
             cmh->ts_=NOW;
 
@@ -1821,7 +1821,7 @@ TMac::TxCTS(Packet *p)
 
     }
     
-    if (SEND==status)
+    if (SENDE==status)
     {
   // this case is supposed not to  happen 
     printf("tmac: SendCTS is in wrong status\n");
@@ -1997,7 +1997,7 @@ TMac::TxACKData(Packet* pkt){
  
   if(SLEEP==status) {
   Poweron();
-  n->SetTransmissionStatus(SEND); 
+  n->SetTransmissionStatus(SENDE);
   cmh->ts_=NOW;
 
   sendDown(pkt);
@@ -2011,7 +2011,7 @@ TMac::TxACKData(Packet* pkt){
 
   if(IDLEE==status){
    printf("TMac TxACKData node %d is idle state at %f\n",index_,NOW);
-    n->SetTransmissionStatus(SEND);
+    n->SetTransmissionStatus(SENDE);
  
      cmh->ts_=NOW;
 
@@ -2036,7 +2036,7 @@ printf("TMac TxACKData node %d is in recv state at %f, will be interrupted\n",in
       s.schedule(&status_handler,&status_event,txtime);
      return;
     }
-if (SEND==status)
+if (SENDE==status)
   {
     printf("tmac: node%d send data too fast\n",index_);
     Packet::free(pkt);
@@ -2113,7 +2113,7 @@ return;
  
  if(IDLEE==status)
  {
-  n->SetTransmissionStatus(SEND); 
+  n->SetTransmissionStatus(SENDE);
         sendDown(pkt);
 	// printf("TMac:node %d TxData at %f\n ",index_,NOW);
         status_handler.SetStatus(IDLEE);
@@ -2134,7 +2134,7 @@ return;
       s.schedule(&status_handler,&status_event,txtime);
     }
 
- if (SEND==status)
+ if (SENDE==status)
     { 
     printf("tmac:Txdata: queue send data too fast\n");
     Packet::free(pkt);

@@ -14,6 +14,7 @@
 #include "marshall.h"
 #include <math.h>
 #include <stddef.h>
+#include "underwatersensor/uw_routing/vectorbasedforward.h"
 
 class EventTrace;
 class Macuw802_11;
@@ -96,8 +97,7 @@ struct hdr_macuw802_11 {
  * calculating tx timeouts (as set in tcl/lan/ns-mac.tcl).
  *   -- Gavin Holland, March 2002
  */
-//#define DSSS_MaxPropagationDelay        0.2
-int DSSS_MaxPropagationDelay=2;
+
 // 0.000002 2us   XXXX
 
 class PHY_MIB {
@@ -227,6 +227,10 @@ protected:
     void	txHandler(void);
 
 private:
+    int sendcount=0;
+    Packet *stored;
+    Packet *stored2;
+    int DSSS_MaxPropagationDelay=2;
     int		command(int argc, const char*const* argv);
 
     /* In support of bug fix described at

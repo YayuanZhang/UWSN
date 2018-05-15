@@ -33,8 +33,8 @@ MANDEST	= /usr/local/man
 BLANK	= # make a blank space.  DO NOT add anything to this line
 
 # The following will be redefined under Windows (see WIN32 lable below)
-CC	= gcc
-CPP	= g++
+CC	= gcc -std=c11
+CPP	= g++ -std=c++11
 LINK	= $(CPP)
 MKDEP	= ./conf/mkdep
 TCLSH	= /home/luviszero/ns-allinone-2.35/bin/tclsh8.5

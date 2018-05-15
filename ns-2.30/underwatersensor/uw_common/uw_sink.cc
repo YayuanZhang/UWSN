@@ -112,7 +112,9 @@ report_timer_(this), NrtMb_ID(-1000),NrtMb_RxPr(-1000),NrtMb_time(0)
 	ActiveSense = 0;
 
 
-	bind_time("data_rate_", &data_rate_);
+    bind_time("data_rate_", &data_rate_);
+    bind_time("data_rate_bct", &datarate_bct);
+
 	bind("packetsize_", &packetsize_);
     bind("packetsize_bct", &packetsize_bct);
 	bind("random_", &random_);
@@ -122,9 +124,6 @@ report_timer_(this), NrtMb_ID(-1000),NrtMb_RxPr(-1000),NrtMb_time(0)
 	// bind("num_recv", &num_recv);
 	// bind("num_send", &num_send);
 	// bind("cum_delay", &cum_delay);
-
-
-
 
 	/* 
 	size_=64;
@@ -146,7 +145,6 @@ void UWSinkAgent::start(int isbct)
     #ifdef UWSINK_LUV
     printf("cbr start\n");
     #endif
-
 	running_ = 1;
 	interval_=1.0/data_rate_;
 	random_=0;	
@@ -170,7 +168,7 @@ void UWSinkAgent::exponential_start()
 void 
 UWSinkAgent::generateInterval()
 {
-	double R=Random::uniform();
+    double R=Random::uniform();
 	double lambda=data_rate_;
 	interval_=-log(R)/lambda;
     #ifdef UWSINK_LUV
@@ -210,10 +208,16 @@ void UWSinkAgent::timeout(int)
        if(!node->ismobile)
    {
        double sendtime=NOW-NrtMb_time;
-       printf("sendtime %lf interal %lf \n",sendtime,4*interval_);
-       if (sendtime>0.4*interval_)
+       printf("sendtime %lf interal %lf \n",sendtime,3*1.0/datarate_bct);
+       if (sendtime>3*1.0/datarate_bct)
        {
          running_=0;
+         hash_map<int,double>::iterator delit;
+         for (hash_map<int,double>::iterator it = MbnodeHash.begin(); it != MbnodeHash.end(); it++) {
+             if (it->first == NrtMb_ID) delit=it;
+         }
+         MbnodeHash.erase(delit);
+
          printf("node %d stop at %lf\n",here_.addr_,NOW);
         }
    }
@@ -296,9 +300,6 @@ void UWSinkAgent::sendpkt()
 	*/
 
     printf("uw_sink:source(%d,%d) send packet %d at %lf : the coordinates of target is (%lf,%lf,%lf) and range=%lf and my position (%f,%f,%f) and cx is(%f,%f,%f)  type is %d\n", vbh->sender_id.addr_,vbh->sender_id.port_,vbh->pk_num, NOW, vbh->info.tx=target_x,vbh->info.ty=target_y, vbh->info.tz=target_z,vbh->range,node->X(),node->Y(),node->Z(),node->CX(),node->CY(),node->CZ(),vbh->mess_type);
-
-
-
 
 	num_send++;
 	//   vbh->attr[0] = data_type_;
@@ -872,14 +873,15 @@ void UWSinkAgent::recv(Packet* pkt, Handler*)
 
 	case DATA :
     {
-        /*printf("UWSink data");
+       /* printf("UWSink recvdata\n");
         hdr_cmn* cmh=HDR_CMN(pkt);
         if(cmh->mobibct_flag_)
         {
             printf("BCT UWSink (id:%d): I get the packet data no.%d from %d \n",here_.addr_, vbh->pk_num,vbh->forward_agent_id.addr_);
-            cum_delay = cum_delay + (NOW - vbh->ts_);
-            num_recv++;
-        }*/
+
+        }
+        cum_delay = cum_delay + (NOW - vbh->ts_);
+        num_recv++;*/
     }
 
 	case TARGET_DISCOVERY:
@@ -908,33 +910,31 @@ void UWSinkAgent::recv(Packet* pkt, Handler*)
             {
                 printf("sender %d remainpower %lf\n",vbh->sender_id.addr_,pkt->txinfo_.RxPr);
                 NrtMb_time=NOW;
-                if (NrtMb_ID==-1000)
-                {
-                    NrtMb_ID=vbh->sender_id.addr_;
-                    NrtMb_RxPr=pkt->txinfo_.RxPr;
-                }
-                else if( pkt->txinfo_.RxPr > NrtMb_RxPr)
-                {
-                    NrtMb_ID=vbh->sender_id.addr_;
-                    NrtMb_RxPr=pkt->txinfo_.RxPr; 
-                }
-                
-                if(NrtMb_ID!=-1000)
-                {
-                    target_id.addr_=NrtMb_ID;
-                    node->next_hop=NrtMb_ID;
-                    printf("node next hop %d\n",node->next_hop);
-                    printf("node %d 's target_id: %d\n",here_.addr_,NrtMb_ID);
-                      if(running_==0)
-                     { isbct_=0;
-                      start(isbct_);}
 
+                MbnodeHash[vbh->sender_id.addr_]=pkt->txinfo_.RxPr;
+                vector< pair<int, double> > MbnodeMap;
+                for (auto it = MbnodeHash.begin(); it != MbnodeHash.end(); it++)
+                        MbnodeMap.push_back(make_pair(it->first, it->second));
+                sort(MbnodeMap.begin(), MbnodeMap.end(),cmp);
+                auto it = MbnodeMap.begin();
+                NrtMb_ID=it->first;
+                NrtMb_RxPr=it->second;
+                //print sorted mbnodehash
+                printf("sorted mbnodehash\n");
+                for (auto it = MbnodeMap.begin(); it != MbnodeMap.end(); it++)
+                        printf("ID %d RemainPower %lf \n",it->first,it->second);
+
+                target_id.addr_=NrtMb_ID;
+                node->next_hop=NrtMb_ID;
+                printf("node next hop %d\n",node->next_hop);
+                printf("node %d 's target_id: %d\n",here_.addr_,NrtMb_ID);
+                if(running_==0)
+               { isbct_=0;
+                  start(isbct_);}
                    // printf("sink-node addr %d",node->addr());
                 }
-                
-                //MbnodeHash[vbh->sender_id]=pkt->txinfo_.RxPr;
-            }
-            hdr_cmn* cmh=HDR_CMN(pkt);
+
+           hdr_cmn* cmh=HDR_CMN(pkt);
             if(!cmh->mobibct_flag_)
             {num_recv++;}
             cum_delay = cum_delay + (NOW - vbh->ts_);

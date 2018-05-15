@@ -251,7 +251,7 @@ UnderwaterPhy::sendUp(Packet *p)
 	/*
 	* Sanity Check
 	*/
-    printf("underwaterphy node %d sendup at %lf\n",node_->address(),NOW);
+   // printf("underwaterphy node %d sendup at %lf\n",node_->address(),NOW);
 	UnderwaterSensorNode* n1;
 	hdr_cmn* cmnh=HDR_CMN(p);
 
@@ -286,7 +286,7 @@ UnderwaterPhy::sendUp(Packet *p)
         if ((status==SENDE || status==SLEEP)||(em()->energy()<=0))
 		{
             printf("node %d,receive failure: SEND, SLEEP or NO-ENERGY at %lf\n",node_->address(),NOW);
-			return pkt_recvd;
+            return pkt_recvd;
 		}
 
 		if(propagation_) {

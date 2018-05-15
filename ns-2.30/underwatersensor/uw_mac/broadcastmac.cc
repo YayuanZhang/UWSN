@@ -146,7 +146,7 @@ BroadcastMac::TxProcess(Packet* pkt){
 	case SLEEP:
 		Poweron();
     case IDLEE:
-		n->SetTransmissionStatus(SEND);
+        n->SetTransmissionStatus(SENDE);
 		cmh->direction()=hdr_cmn::DOWN; 
 		cmh->addr_type()=NS_AF_ILINK;
 		//add the sync hdr
@@ -160,7 +160,7 @@ BroadcastMac::TxProcess(Packet* pkt){
 			s.schedule(&backoff_handler,(Event*) pkt,backoff);
 		}
 		return;
-	case SEND:
+    case SENDE:
 		Packet::free(pkt);
 		return;
 	default:

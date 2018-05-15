@@ -1,4 +1,0 @@
-PacketHeader/Common offset 0
-PacketHeader/UWVB offset 128
-PacketHeader/Mac offset 312
-PacketHeader/LL offset 352

@@ -20241,6 +20241,7 @@ Queue set util_records_ 5 ; 		# Changed from 0 to 5, 2/25/05.\n\
 \n\
 \n\
 Agent/UWSink set data_rate_ 1.0 \n\
+Agent/UWSink set data_rate_bct 1.0 \n\
 Agent/UWSink set packetsize_ 50 ;#bytes\n\
 Agent/UWSink set packetsize_bct 40 ;#bytes\n\
 Agent/UWSink set random_ 0 \n\

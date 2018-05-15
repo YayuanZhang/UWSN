@@ -515,6 +515,7 @@ static const iface_literal ANY_IFACE(iface_literal::ANY_IFACE, "*");
 enum ns_af_enum { NS_AF_NONE, NS_AF_ILINK, NS_AF_INET };
 
 struct hdr_cmn {
+    int pkt_flag;
 	enum dir_t { DOWN= -1, NONE= 0, UP= 1 };
 	packet_t ptype_;	// packet type (see above)
 	int	size_;		// simulated packet size

@@ -396,7 +396,7 @@ RMac::TxACKRev(Packet* pkt){
 
   if(SLEEP==n->TransmissionStatus()) {
   Poweron();
-  n->SetTransmissionStatus(SEND); 
+  n->SetTransmissionStatus(SENDE);
   cmh->ts_=NOW;
 
   sendDown(pkt);
@@ -411,9 +411,9 @@ RMac::TxACKRev(Packet* pkt){
   return;
   }
 
-  if(IDLE==n->TransmissionStatus()){
+  if(IDLEE==n->TransmissionStatus()){
   
-    n->SetTransmissionStatus(SEND);
+    n->SetTransmissionStatus(SENDE);
      cmh->ts_=NOW;
      sendDown(pkt);
   //  printf("broadcast %d Tx Idle set timer at %f tx is %f\n",node_->nodeid(),NOW,txtime);
@@ -423,13 +423,13 @@ RMac::TxACKRev(Packet* pkt){
   printf("rmacTxackrev: node %d converged with ACKwindow\n",index_);  
   InsertReservedTimeTable(index_,PeriodInterval_,4*PeriodInterval_);
   }
-  status_handler.SetStatus(IDLE);
+  status_handler.SetStatus(IDLEE);
   Scheduler& s=Scheduler::instance();
   s.schedule(&status_handler,&status_event,txtime);
   return;
   }
 
-  if(RECV==n->TransmissionStatus())
+  if(RECVE==n->TransmissionStatus())
     {
       
       InterruptRecv(txtime);
@@ -440,14 +440,14 @@ RMac::TxACKRev(Packet* pkt){
   printf("rmacTxackrev: node %d converged with ACKwindow\n",index_);  
        InsertReservedTimeTable(index_,PeriodInterval_,4*PeriodInterval_);
       }
-      status_handler.SetStatus(IDLE);
+      status_handler.SetStatus(IDLEE);
       Scheduler& s=Scheduler::instance();
       s.schedule(&status_handler,&status_event,txtime);
      return;
     }
 
 
-if (SEND==n->TransmissionStatus())
+if (SENDE==n->TransmissionStatus())
   {
     printf("rmac: queue send data too fast\n");
     Packet::free(pkt);
@@ -1845,7 +1845,7 @@ RMac::TxRev(Event* e){
 
   if(SLEEP==n->TransmissionStatus()) {
   Poweron();
-  n->SetTransmissionStatus(SEND); 
+  n->SetTransmissionStatus(SENDE);
   cmh->ts_=NOW;
 
   sendDown(pkt);
@@ -1856,9 +1856,9 @@ RMac::TxRev(Event* e){
   return;
   }
 
-  if(IDLE==n->TransmissionStatus()){
+  if(IDLEE==n->TransmissionStatus()){
   
-    n->SetTransmissionStatus(SEND);
+    n->SetTransmissionStatus(SENDE);
  
      cmh->ts_=NOW;
 
@@ -1866,27 +1866,27 @@ RMac::TxRev(Event* e){
      // printf("broadcast %d Tx Idle set timer at %f tx is %f\n",node_->nodeid(),NOW,txtime);
 
      printf("TxREV, node %d is in idle at %f\n",index_,NOW);
-  status_handler.SetStatus(IDLE);
+  status_handler.SetStatus(IDLEE);
   Scheduler& s=Scheduler::instance();
   s.schedule(&status_handler,&status_event,txtime);
   return;
   }
 
-  if(RECV==n->TransmissionStatus())
+  if(RECVE==n->TransmissionStatus())
     {
       
       InterruptRecv(txtime);
       cmh->ts_=NOW;
       sendDown(pkt);
       printf("TxREV, node %d is in recv at %f\n",index_,NOW);
-      status_handler.SetStatus(IDLE);
+      status_handler.SetStatus(IDLEE);
       Scheduler& s=Scheduler::instance();
       s.schedule(&status_handler,&status_event,txtime);
      return;
     }
 
 
-if (SEND==n->TransmissionStatus())
+if (SENDE==n->TransmissionStatus())
   {
     printf("rmac: queue send data too fast\n");
     Packet::free(pkt);
@@ -2245,7 +2245,7 @@ RMac::TxND(Packet* pkt, double window)
 
   if(SLEEP==n->TransmissionStatus()) {
   Poweron();
-  n->SetTransmissionStatus(SEND);
+  n->SetTransmissionStatus(SENDE);
   cmh->ts_=NOW;
 
   if(PhaseStatus==PHASETWO){
@@ -2258,15 +2258,15 @@ RMac::TxND(Packet* pkt, double window)
   sendDown(pkt);
   backoff_handler.clear();
 
-  status_handler.SetStatus(IDLE);
+  status_handler.SetStatus(IDLEE);
   Scheduler& s=Scheduler::instance();
   s.schedule(&status_handler,&status_event,txtime);
   return;
   }
 
-  if(IDLE==n->TransmissionStatus()){
+  if(IDLEE==n->TransmissionStatus()){
   
-  n->SetTransmissionStatus(SEND);
+  n->SetTransmissionStatus(SENDE);
  
   //printf("TxND the data type is %d\n",MAC_BROADCAST);
   //printf("broadcast : I am going to send the packet down tx is %f\n",txtime);
@@ -2283,13 +2283,13 @@ RMac::TxND(Packet* pkt, double window)
   backoff_handler.clear();
   //  printf("broadcast %d Tx Idle set timer at %f tx is %f\n",node_->nodeid(),NOW,txtime);
 
-   status_handler.SetStatus(IDLE);
+   status_handler.SetStatus(IDLEE);
   Scheduler& s=Scheduler::instance();
   s.schedule(&status_handler,&status_event,txtime);
   return;
   }
 
-  if(RECV==n->TransmissionStatus())
+  if(RECVE==n->TransmissionStatus())
     {
       Scheduler& s=Scheduler::instance();
       double d1=window-(NOW-cycle_start_time);
@@ -2309,7 +2309,7 @@ RMac::TxND(Packet* pkt, double window)
 
     }
 
-if (SEND==n->TransmissionStatus())
+if (SENDE==n->TransmissionStatus())
 {
   // this case is supposed not to  happen 
     printf("rmac: queue send data too fas\n");
@@ -2713,7 +2713,7 @@ RMac::TxACKData(Event* e)
  
   if(SLEEP==n->TransmissionStatus()) {
   Poweron();
-  n->SetTransmissionStatus(SEND); 
+  n->SetTransmissionStatus(SENDE);
   cmh->ts_=NOW;
 
   sendDown(pkt);
@@ -2725,35 +2725,35 @@ RMac::TxACKData(Event* e)
   return;
   }
 
-  if(IDLE==n->TransmissionStatus()){
+  if(IDLEE==n->TransmissionStatus()){
   
-    n->SetTransmissionStatus(SEND);
+    n->SetTransmissionStatus(SENDE);
  
      cmh->ts_=NOW;
 
      sendDown(pkt);
   printf("RMac TxACKData node %d at %f\n",index_,NOW);
-  status_handler.SetStatus(IDLE);
+  status_handler.SetStatus(IDLEE);
   Scheduler& s=Scheduler::instance();
   s.schedule(&status_handler,&status_event,txtime);
   return;
   }
 
-  if(RECV==n->TransmissionStatus())
+  if(RECVE==n->TransmissionStatus())
     {
       
       InterruptRecv(txtime);
       cmh->ts_=NOW;
       sendDown(pkt);
 printf("RMac TxACKData node %d at %f\n",index_,NOW);
-      status_handler.SetStatus(IDLE);
+      status_handler.SetStatus(IDLEE);
       Scheduler& s=Scheduler::instance();
       s.schedule(&status_handler,&status_event,txtime);
      return;
     }
 
 
-if (SEND==n->TransmissionStatus())
+if (SENDE==n->TransmissionStatus())
   {
     printf("rmac: node%d send data too fast\n",index_);
     Packet::free(pkt);
@@ -3014,28 +3014,28 @@ return;
 
  
 
- if(IDLE==status)
+ if(IDLEE==status)
  {
-  n->SetTransmissionStatus(SEND); 
+  n->SetTransmissionStatus(SENDE);
         sendDown(pkt);
  printf("RMac:node %d TxData at %f\n ",index_,NOW);
-        status_handler.SetStatus(IDLE);
+        status_handler.SetStatus(IDLEE);
       Scheduler& s=Scheduler::instance();
       s.schedule(&status_handler,&status_event,txtime);  
  }
 
- if(RECV==status)
+ if(RECVE==status)
     {
       InterruptRecv(txtime);
       
       sendDown(pkt);
  printf("RMac:node %d TxData at %f\n ",index_,NOW);
-      status_handler.SetStatus(IDLE);
+      status_handler.SetStatus(IDLEE);
       Scheduler& s=Scheduler::instance();
       s.schedule(&status_handler,&status_event,txtime);
     }
 
- if (SEND==status)
+ if (SENDE==status)
     { 
     printf("rmac:Txdata: queue send data too fast\n");
     Packet::free(pkt);
