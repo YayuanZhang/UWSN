@@ -1,0 +1,23 @@
+n -t * -s 0  -x 1000 -y 5000 -Z 0 -z 1000  -v circle -c green
+n -t * -s 1  -x 1000 -y 3000 -Z 0 -z 1000  -v circle -c green
+n -t * -s 2  -x 1000 -y 1000 -Z 0 -z 1000  -v circle -c green
+n -t * -s 3  -x 3000 -y 5000 -Z 0 -z 1000  -v circle -c green
+n -t * -s 4  -x 3000 -y 3000 -Z 0 -z 1000  -v circle -c green
+n -t * -s 5  -x 3000 -y 1000 -Z 0 -z 1000  -v circle -c green
+n -t * -s 6  -x 5000 -y 5000 -Z 0 -z 1000  -v circle -c green
+n -t * -s 7  -x 5000 -y 3000 -Z 0 -z 1000  -v circle -c green
+n -t * -s 8  -x 5000 -y 1000 -Z 0 -z 1000  -v circle -c green
+n -t * -s 9  -x 7000 -y 5000 -Z 0 -z 1000  -v circle -c green
+n -t * -s 10  -x 7000 -y 3000 -Z 0 -z 1000  -v circle -c green
+n -t * -s 11  -x 7000 -y 1000 -Z 0 -z 1000  -v circle -c green
+n -t * -s 12  -x 2000 -y 6000 -Z 0 -z 1000  -v circle -c green
+n -t * -s 13  -x 6000 -y 6000 -Z 0 -z 1000  -v circle -c green
+n -t * -s 14  -x 4000 -y 10 -Z 0 -z 1000  -v circle -c green
+V -t * -v 1.0a5 -a 0
+W -t * -x 10000 -y 7000
+A -t * -n 1 -p 0 -o 0xffffffff -c 31 -a 1
+A -t * -h 1 -m 2147483647 -s 0
+n -t 15.100000 -s 12 -x 2000.000000 -y 6000.000000 -U 0.000000 -V -2.500000 -T 2396.000000
+n -t 15.100000 -s 13 -x 6000.000000 -y 6000.000000 -U 0.000000 -V -2.500000 -T 2396.000000
+n -t 15.100000 -s 14 -x 4000.000000 -y 10.000000 -U 0.000000 -V 2.500000 -T 2396.000000
+W -t 2415

@@ -1,0 +1,471 @@
+PacketHeader/Common offset 0
+PacketHeader/UWVB offset 136
+PacketHeader/Mac offset 320
+PacketHeader/LL offset 360
++++++++AFTER ANNOUNCE++++++++++++++
+starting Simulation...
+num_nodes is set 15
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 0 at 15.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 0 at 15.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 0 at 15.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+node 14 UW802 packetsize_ 8
+back off 14000000.500000
+node 13 UW802 packetsize_ 8
+back off 5000000.500000
+node 12 UW802 packetsize_ 8
+back off 1000000.500000
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 1 at 65.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 1 at 65.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 1 at 65.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 2 at 115.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 2 at 115.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 2 at 115.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 3 at 165.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 3 at 165.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 3 at 165.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 4 at 215.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 4 at 215.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 4 at 215.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 5 at 265.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 5 at 265.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 5 at 265.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 6 at 315.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 6 at 315.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 6 at 315.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 7 at 365.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 7 at 365.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 7 at 365.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 8 at 415.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 8 at 415.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 8 at 415.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 9 at 465.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 9 at 465.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 9 at 465.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 10 at 515.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 10 at 515.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 10 at 515.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 11 at 565.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 11 at 565.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 11 at 565.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 12 at 615.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 12 at 615.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 12 at 615.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 13 at 665.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 13 at 665.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 13 at 665.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 14 at 715.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 14 at 715.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 14 at 715.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 15 at 765.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 15 at 765.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 15 at 765.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 16 at 815.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 16 at 815.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 16 at 815.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 17 at 865.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 17 at 865.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 17 at 865.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 18 at 915.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 18 at 915.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 18 at 915.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 19 at 965.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 19 at 965.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 19 at 965.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 20 at 1015.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 20 at 1015.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 20 at 1015.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 21 at 1065.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 21 at 1065.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 21 at 1065.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 22 at 1115.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 22 at 1115.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 22 at 1115.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 23 at 1165.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 23 at 1165.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 23 at 1165.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 24 at 1215.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 24 at 1215.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 24 at 1215.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 25 at 1265.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 25 at 1265.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 25 at 1265.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 26 at 1315.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 26 at 1315.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 26 at 1315.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 27 at 1365.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 27 at 1365.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 27 at 1365.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 28 at 1415.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 28 at 1415.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 28 at 1415.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 29 at 1465.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 29 at 1465.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 29 at 1465.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 30 at 1515.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 30 at 1515.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 30 at 1515.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 31 at 1565.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 31 at 1565.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 31 at 1565.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 32 at 1615.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 32 at 1615.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 32 at 1615.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 33 at 1665.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 33 at 1665.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 33 at 1665.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 34 at 1715.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 34 at 1715.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 34 at 1715.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 35 at 1765.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 35 at 1765.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 35 at 1765.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 36 at 1815.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 36 at 1815.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 36 at 1815.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 37 at 1865.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 37 at 1865.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 37 at 1865.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 38 at 1915.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 38 at 1915.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 38 at 1915.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 39 at 1965.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 39 at 1965.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 39 at 1965.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 40 at 2015.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 40 at 2015.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 40 at 2015.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 41 at 2065.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 41 at 2065.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 41 at 2065.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 42 at 2115.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 42 at 2115.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 42 at 2115.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 43 at 2165.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 43 at 2165.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 43 at 2165.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 44 at 2215.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 44 at 2215.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 44 at 2215.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 45 at 2265.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 45 at 2265.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 45 at 2265.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 46 at 2315.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 46 at 2315.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 46 at 2315.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 47 at 2365.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 47 at 2365.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+uw_sink:source(12,0) send packet 47 at 2365.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+uwsink14 target:-1
+uw_sink:source(14,0) send packet 48 at 2415.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (4000.000000,10.000000,0.000000) and cx is(4000.000000,10.000000,0.000000)  type is 2
+uwsink13 target:-1
+uw_sink:source(13,0) send packet 48 at 2415.000000 : the coordinates of target is (-5.000000,5.000000,0.000000) and range=3500.000000 and my position (6000.000000,6000.000000,0.000000) and cx is(6000.000000,6000.000000,0.000000)  type is 2
+uwsink12 target:-1
+NS EXISTING...
+uw_sink:source(12,0) send packet 48 at 2415.000000 : the coordinates of target is (2400.000000,4000.000000,0.000000) and range=3500.000000 and my position (2000.000000,6000.000000,0.000000) and cx is(2000.000000,6000.000000,0.000000)  type is 2
+ll used
+ll used
+ll used
+SINK 0 : terminates (send 0, recv 0, cum_delay 0.000000)
+SINK 1 : terminates (send 0, recv 0, cum_delay 0.000000)
+SINK 2 : terminates (send 0, recv 0, cum_delay 0.000000)
+SINK 3 : terminates (send 0, recv 0, cum_delay 0.000000)
+SINK 4 : terminates (send 0, recv 0, cum_delay 0.000000)
+SINK 5 : terminates (send 0, recv 0, cum_delay 0.000000)
+SINK 6 : terminates (send 0, recv 0, cum_delay 0.000000)
+SINK 7 : terminates (send 0, recv 0, cum_delay 0.000000)
+SINK 8 : terminates (send 0, recv 0, cum_delay 0.000000)
+SINK 9 : terminates (send 0, recv 0, cum_delay 0.000000)
+SINK 10 : terminates (send 0, recv 0, cum_delay 0.000000)
+SINK 11 : terminates (send 0, recv 0, cum_delay 0.000000)
+SINK 12 : terminates (send 0, recv 0, cum_delay 0.000000)
+SINK 13 : terminates (send 0, recv 0, cum_delay 0.000000)
+SINK(13) : send_id = 13, num_recv = 1
+SINK 14 : terminates (send 0, recv 0, cum_delay 0.000000)
+god: the energy consumped is 7245.000000
