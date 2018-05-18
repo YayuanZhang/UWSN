@@ -1,4 +1,4 @@
-set opt(data_rate)                       0.03
+set opt(data_rate)                       0.001
 set opt(packetsize)                      300
 set opt(packetsize_bct)                  8
 set opt(datarate_bct)                    0.005

@@ -22,20 +22,20 @@ plot "SFAMA" using 1:7 smooth bezier lw 7 title "SFAMA","UW802_11" using 1:7 smo
 
 set ylabel "average end-to-end delay/s" offset 0,0 font "40,bold"
 set xlabel "generating rate pkt/s" offset 0,0 font "40,bold"
-plot "UW802_11" using 1:8 smooth bezier lw 7 title "UW802.11","SFAMA" using 1:8 smooth bezier lw 7 title "SFAMA","ALOHA" using 1:8 smooth bezier lw 7  title "ALOHA"
+plot "SFAMA" using 1:8 smooth bezier lw 7 title "SFAMA","UW802_11" using 1:8 smooth bezier lw 7 title "UW802.11","ALOHA" using 1:8 smooth bezier lw 7  title "ALOHA"
 
 
 set ylabel "successful delivery rate" offset 0,0 font "40,bold"
 set xlabel "generating rate pkt/s" offset 0,0 font "40,bold"
 set ytics 0.1 font '40,bold'
-plot "UW802_11" using 1:9 smooth bezier lw 7 title "UW802.11" ,"SFAMA" using 1:9 smooth bezier lw 7 title "SFAMA","ALOHA" using 1:9 smooth bezier lw 7 title "ALOHA"
+plot "SFAMA" using 1:9 smooth bezier lw 7 title "SFAMA","UW802_11" using 1:9 smooth bezier lw 7 title "UW802.11" ,"ALOHA" using 1:9 smooth bezier lw 7 title "ALOHA"
 
 
 set ylabel "average energy consumption J/packet" offset 0,0 font "40,bold"
 set xlabel "generating rate pkt/s" offset 0,0 font "40,bold"
 set yrange[0:800]
 set ytics 50
-plot "UW802_11" using 1:10 smooth bezier lw 7 title "UW802.11" ,"SFAMA" using 1:10 smooth bezier lw 7 title "SFAMA","ALOHA" using 1:10 smooth bezier lw 7 title "ALOHA"
+plot "SFAMA" using 1:10 smooth bezier lw 7 title "SFAMA","UW802_11" using 1:10 smooth bezier lw 7 title "UW802.11" ,"ALOHA" using 1:10 smooth bezier lw 7 title "ALOHA"
 q
 !
 

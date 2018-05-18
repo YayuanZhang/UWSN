@@ -1,4 +1,4 @@
-set opt(data_rate)                       0.01
+set opt(data_rate)                       0.004
 set opt(packetsize)                      300
 set opt(datarate_bct)                    0.05
 set opt(dataname)                  test_ALOHA.data
@@ -487,18 +487,18 @@ $a_(13) set-filename $opt(dataname)
 
 
 #$ns_ at $start_time "$a_($total_number) cbr-start"
-$ns_ at 15.1 "$a_(0) cbr-start"
-$ns_ at 17.1 "$a_(1) cbr-start"
-$ns_ at 19.1 "$a_(2) cbr-start"
-$ns_ at 21.1 "$a_(3) cbr-start"
-$ns_ at 23.1 "$a_(4) cbr-start"
-$ns_ at 25.1 "$a_(5) cbr-start"
-$ns_ at 15.1 "$a_(6) cbr-start"
-$ns_ at 17.1 "$a_(7) cbr-start"
-$ns_ at 19.1 "$a_(8) cbr-start"
-$ns_ at 21.1 "$a_(9) cbr-start"
-$ns_ at 23.1 "$a_(10) cbr-start"
-$ns_ at 25.1 "$a_(11) cbr-start"
+$ns_ at 19 "$a_(0) cbr-start"
+$ns_ at 240 "$a_(1) cbr-start"
+$ns_ at 1041 "$a_(2) cbr-start"
+$ns_ at 21 "$a_(3) cbr-start"
+$ns_ at 242 "$a_(4) cbr-start"
+$ns_ at 1043 "$a_(5) cbr-start"
+$ns_ at 29 "$a_(6) cbr-start"
+$ns_ at 433 "$a_(7) cbr-start"
+$ns_ at 1027 "$a_(8) cbr-start"
+$ns_ at 31 "$a_(9) cbr-start"
+$ns_ at 435 "$a_(10) cbr-start"
+$ns_ at 1029 "$a_(11) cbr-start"
 
 
 #$ns_ at 4 "$a_(0) cbr-start"
@@ -518,16 +518,16 @@ puts "+++++++AFTER ANNOUNCE++++++++++++++"
 
 
 
-$ns_ at $opt(stop).001 "$a_(0) terminate"
+$ns_ at 2052.001 "$a_(0) terminate"
 $ns_ at $opt(stop).001 "$a_(1) terminate"
 $ns_ at $opt(stop).001 "$a_(2) terminate"
-$ns_ at $opt(stop).001 "$a_(3) terminate"
+$ns_ at 2052.001 "$a_(3) terminate"
 $ns_ at $opt(stop).001 "$a_(4) terminate"
 $ns_ at $opt(stop).001 "$a_(5) terminate"
-$ns_ at $opt(stop).001 "$a_(6) terminate"
+$ns_ at 2029.001 "$a_(6) terminate"
 $ns_ at $opt(stop).001 "$a_(7) terminate"
 $ns_ at $opt(stop).001 "$a_(8) terminate"
-$ns_ at $opt(stop).001 "$a_(9) terminate"
+$ns_ at 2029.001 "$a_(9) terminate"
 $ns_ at $opt(stop).001 "$a_(10) terminate"
 $ns_ at $opt(stop).001 "$a_(11) terminate"
 $ns_ at $opt(stop).001 "$a_(12) terminate"

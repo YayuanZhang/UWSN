@@ -182,7 +182,7 @@ PHY_MIB::PHY_MIB(Macuw802_11 *parent)
     parent->bind("PreambleLength_", &PreambleLength);
     parent->bind("PLCPHeaderLength_", &PLCPHeaderLength);
     parent->bind_bw("PLCPDataRate_", &PLCPDataRate);
-    SlotTime=0.2;//0.0002
+    SlotTime=0.5;//0.0002
     SIFSTime=0.1;//0.0001
     //printf("bind PreambleLength %lf\n",PreambleLength);
     //printf("bind PLCPHeaderLength %lf\n",PLCPHeaderLength);
@@ -1718,7 +1718,10 @@ Macuw802_11::recvDATA(Packet *p)
             {
                 sendACK(src);
              }
-            else if(cmh->pkt_flag == 1){return;}
+            else if(cmh->pkt_flag == 1)
+            { uptarget_->recv(p, (Handler*) 0);
+                return;
+            }
            tx_resume();
 
         } else {

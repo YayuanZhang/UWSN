@@ -1,13 +1,13 @@
-set opt(data_rate)    0.030
+set opt(data_rate)    0.004
 set opt(packetsize)                      300
-set opt(datarate_bct)                    0.05
-set opt(dataname)                  test_ALOHA.data
+set opt(packetsize_bct)                  8
+set opt(datarate_bct)                    0.005
 set opt(distance)                        2000
 
 set opt(chan)		Channel/UnderwaterChannel
 set opt(prop)		Propagation/UnderwaterPropagation
 set opt(netif)		Phy/UnderwaterPhy
-set opt(mac)		Mac/UnderwaterMac/UWALOHA
+set opt(mac)		Mac/UnderwaterMac/uw802_11
 set opt(ifq)		Queue/DropTail/PriQueue
 set opt(ll)		LL
 set opt(energy)         EnergyModel
@@ -24,32 +24,34 @@ set opt(filters)        GradientFilter    ;# options can be one or more of
 # the following parameters are set fot protocols
 set opt(bit_rate)                     1000
 set opt(encoding_efficiency)          1
+set opt(guard_time)		      0.00001
+set opt(max_backoff_slots)            4
+set opt(max_burst)                    1
 
 
-set opt(dz)                           10
-set opt(ifqlen)		              50	;# max packet in ifq
+set opt(dz)                             10
+set opt(ifqlen)		                50       ;# max packet in ifq
 set opt(nn)	                	14	;# number of nodes in each layer
 set opt(layers)                         1
 set opt(x)	                	10000	;# X dimension of the topography
-set opt(y)	                        6000  ;# Y dimension of the topography
+set opt(y)	                        6000 ;# Y dimension of the topography
 set opt(z)                              [expr ($opt(layers)-1)*$opt(dz)]
 set opt(seed)	                	348.88
 set opt(stop)	                	2415	;# simulation time
 set opt(prestop)                        2400 ;# time to prepare to stop
-set opt(tr)	                	"SFAMA.tr"	;# trace file
-set opt(nam)                            "SFAMA.nam"  ;# nam file
+set opt(tr)	                	"802_11.tr"	;# trace file
+set opt(nam)                            "802_11.nam"  ;# nam file
 set opt(adhocRouting)                    Vectorbasedforward
 set opt(width)                           20
 set opt(adj)                             10
-set opt(interval)                        0.001
+set opt(interval)                        0.01
 #set opt(traf)	                	"diffusion-traf.tcl"      ;# traffic file
-
 # ==================================================================
 set start_time                  10
 
-LL set mindelay_		50us
-LL set delay_			25us
-LL set bandwidth_		0	;# not used
+#LL set mindelay_		50us
+#LL set delay_			25us
+#LL set bandwidth_		0	;# not used
 
 #Queue/DropTail/PriQueue set Prefer_Routing_Protocols    1
 
@@ -66,24 +68,27 @@ Antenna/OmniAntenna set Gr_ 1.0
 
 Mac/UnderwaterMac set bit_rate_  $opt(bit_rate)
 Mac/UnderwaterMac set encoding_efficiency_  $opt(encoding_efficiency)
-Mac/UnderwaterMac/UWALOHA set Persistent 1
-Mac/UnderwaterMac/UWALOHA set ACKOn 1
-Mac/UnderwaterMac/UWALOHA set Min_Backoff 0
-Mac/UnderwaterMac/UWALOHA set Max_Backoff 1.5
-Mac/UnderwaterMac/UWALOHA set WaitACKTime 2
+Mac/UnderwaterMac/uw802_11 set dataRate_      1000
+Mac/UnderwaterMac/uw802_11 set basicRate_     1000
+Mac/UnderwaterMac/uw802_11 set PLCPDataRate_  1000000 
+Mac/UnderwaterMac/uw802_11 set SlotTime_      4      ;# 0.0000020 20us\n\
+Mac/UnderwaterMac/uw802_11 set SIFS_          2    ;# 10us\n\
+Mac/UnderwaterMac/uw802_11 set CWMax_         1024
+Mac/UnderwaterMac/uw802_11 set CWMin_         32
 
 # Initialize the SharedMedia interface with parameters to make
 # it work like the 914MHz Lucent WaveLAN DSSS radio interface
-Phy/UnderwaterPhy set CPThresh_ 10  ;#10.0
-Phy/UnderwaterPhy set CSThresh_ 1.47  ;#1.559e-11
-Phy/UnderwaterPhy set RXThresh_ 1.47   ;#3.652e-10
+Phy/UnderwaterPhy set CPThresh_ 10 ;#100  10.0
+Phy/UnderwaterPhy set CSThresh_ 1.47  ;# 1.559e-11
+Phy/UnderwaterPhy set RXThresh_ 1.47 ;#3.652e-10
 #Phy/UnderwaterPhy set Rb_ 2*1e6
-Phy/UnderwaterPhy set Pt_ 30
+Phy/UnderwaterPhy set Pt_ 30;#0.2818
 Phy/UnderwaterPhy set freq_ 10  ;#frequency range in khz 
 Phy/UnderwaterPhy set K_ 2.0   ;#spherical spreading
 Phy/UnderwaterPhy set setTxPower 30;
 Phy/UnderwaterPhy set setRxPower 1;
 Phy/UnderwaterPhy set setIdlePower 0.2;
+
 # ==================================================================
 # Main Program
 # =================================================================
@@ -95,7 +100,8 @@ Phy/UnderwaterPhy set setIdlePower 0.2;
 
 
 remove-all-packet-headers 
-add-packet-header Common UWVB UWALOHA LL Mac
+#remove-packet-header AODV ARP TORA  IMEP TFRC
+add-packet-header Common UWVB Mac LL
 set ns_ [new Simulator]
 set topo  [new Topography]
 
@@ -137,7 +143,7 @@ $ns_ node-config -adhocRouting $opt(adhocRouting) \
                  -idlePower $opt(idlepower)\
                  -channel $chan_1_
 
-$god_ set_filename $opt(dataname)
+$god_ set_filename test_802.data
 
 set node_(0) [$ns_  node 0]
 $god_ new_node $node_(0)
@@ -152,15 +158,17 @@ $node_(0) ismobile 0
 $node_(0) addenergymodel [new $opt(energy) $node_(0) $opt(initialenergy)  $opt(txpower) $opt(rxpower)]
 set a_(0) [new Agent/UWSink]
 $ns_ attach-agent $node_(0) $a_(0)
-$a_(0) cmd setTargetAddress 12
+$a_(0) setTargetAddress 12
 $a_(0) attach-vectorbasedforward $opt(width)
 $a_(0) set-range 3500
 $a_(0) set-target-x   -5
 $a_(0) set-target-y   5
 $a_(0) set-target-z   0
 $a_(0) set data_rate_  $opt(data_rate)
+$a_(0) set data_rate_bct $opt(datarate_bct)
 $a_(0) set-packetsize $opt(packetsize)
-$a_(0) set-filename $opt(dataname)
+$a_(0) set-mactype 1
+$a_(0) set-filename test_802.data
 
 set node_(1) [$ns_  node 1]
 $god_ new_node $node_(1)
@@ -182,9 +190,10 @@ $a_(1) set-target-x   -5
 $a_(1) set-target-y   5
 $a_(1) set-target-z   0
 $a_(1) set data_rate_  $opt(data_rate)
+$a_(1) set data_rate_bct $opt(datarate_bct)
 $a_(1) set-packetsize $opt(packetsize)
-$a_(1) set-mactype 2
-$a_(1) set-filename $opt(dataname)
+$a_(1) set-mactype 1
+$a_(1) set-filename test_802.data
 
 set node_(2) [$ns_  node 2]
 $god_ new_node $node_(2)
@@ -206,9 +215,10 @@ $a_(2) set-target-x   -5
 $a_(2) set-target-y   5
 $a_(2) set-target-z   0
 $a_(2) set data_rate_  $opt(data_rate)
+$a_(2) set data_rate_bct $opt(datarate_bct)
 $a_(2) set-packetsize $opt(packetsize)
-$a_(2) set-mactype 2
-$a_(2) set-filename $opt(dataname)
+$a_(2) set-mactype 1
+$a_(2) set-filename test_802.data
 
 set node_(3) [$ns_  node 3]
 $god_ new_node $node_(3)
@@ -226,13 +236,14 @@ $ns_ attach-agent $node_(3) $a_(3)
 $a_(3) setTargetAddress 12
 $a_(3) attach-vectorbasedforward $opt(width)
 $a_(3) set-range 3500
-$a_(3) set-target-x   2510
-$a_(3) set-target-y   4010
+$a_(3) set-target-x   2000
+$a_(3) set-target-y   1000
 $a_(3) set-target-z   0
 $a_(3) set data_rate_  $opt(data_rate)
+$a_(3) set data_rate_bct $opt(datarate_bct)
 $a_(3) set-packetsize $opt(packetsize)
-$a_(3) set-mactype 2
-$a_(3) set-filename $opt(dataname)
+$a_(3) set-mactype 1
+$a_(3) set-filename test_802.data
 
 set node_(4) [$ns_  node 4]
 $god_ new_node $node_(4)
@@ -254,9 +265,10 @@ $a_(4) set-target-x   -5
 $a_(4) set-target-y   5
 $a_(4) set-target-z   0
 $a_(4) set data_rate_  $opt(data_rate)
+$a_(4) set data_rate_bct $opt(datarate_bct)
 $a_(4) set-packetsize $opt(packetsize)
-$a_(4) set-mactype 2
-$a_(4) set-filename $opt(dataname)
+$a_(4) set-mactype 1
+$a_(4) set-filename test_802.data
 
 set node_(5) [$ns_  node 5]
 $god_ new_node $node_(5)
@@ -274,13 +286,15 @@ $ns_ attach-agent $node_(5) $a_(5)
 $a_(5) setTargetAddress 12
 $a_(5) attach-vectorbasedforward $opt(width)
 $a_(5) set-range 3500
+$a_(5) set data_rate_ 0.05
 $a_(5) set-target-x   -5
 $a_(5) set-target-y   5
 $a_(5) set-target-z   0
 $a_(5) set data_rate_  $opt(data_rate)
+$a_(5) set data_rate_bct $opt(datarate_bct)
 $a_(5) set-packetsize $opt(packetsize)
-$a_(5) set-mactype 2
-$a_(5) set-filename $opt(dataname)
+$a_(5) set-mactype 1
+$a_(5) set-filename test_802.data
 
 set node_(6) [$ns_  node 6]
 $god_ new_node $node_(6)
@@ -295,16 +309,17 @@ $node_(6) ismobile 0
 $node_(6) addenergymodel [new $opt(energy) $node_(6) $opt(initialenergy)  $opt(txpower) $opt(rxpower)]
 set a_(6) [new Agent/UWSink]
 $ns_ attach-agent $node_(6) $a_(6)
-$a_(6) setTargetAddress 13
+$a_(6) cmd setTargetAddress 12
 $a_(6) attach-vectorbasedforward $opt(width)
 $a_(6) set-range 3500
-$a_(6) set-target-x   -5
-$a_(6) set-target-y   5
+$a_(6) set-target-x   6000
+$a_(6) set-target-y   1000
 $a_(6) set-target-z   0
 $a_(6) set data_rate_  $opt(data_rate)
+$a_(6) set data_rate_bct $opt(datarate_bct)
 $a_(6) set-packetsize $opt(packetsize)
-$a_(6) set-mactype 2
-$a_(6) set-filename $opt(dataname)
+$a_(6) set-mactype 1
+$a_(6) set-filename test_802.data
 
 set node_(7) [$ns_  node 7]
 $god_ new_node $node_(7)
@@ -326,9 +341,10 @@ $a_(7) set-target-x   -5
 $a_(7) set-target-y   5
 $a_(7) set-target-z   0
 $a_(7) set data_rate_  $opt(data_rate)
+$a_(7) set data_rate_bct $opt(datarate_bct)
 $a_(7) set-packetsize $opt(packetsize)
-$a_(7) set-mactype 2
-$a_(7) set-filename $opt(dataname)
+$a_(7) set-mactype 1
+$a_(7) set-filename test_802.data
 
 set node_(8) [$ns_  node 8]
 $god_ new_node $node_(8)
@@ -350,9 +366,10 @@ $a_(8) set-target-x   -5
 $a_(8) set-target-y   5
 $a_(8) set-target-z   0
 $a_(8) set data_rate_  $opt(data_rate)
+$a_(8) set data_rate_bct $opt(datarate_bct)
 $a_(8) set-packetsize $opt(packetsize)
-$a_(8) set-mactype 2
-$a_(8) set-filename $opt(dataname)
+$a_(8) set-mactype 1
+$a_(8) set-filename test_802.data
 
 set node_(9) [$ns_  node 9]
 $god_ new_node $node_(9)
@@ -367,7 +384,7 @@ $node_(9) ismobile 0
 $node_(9) addenergymodel [new $opt(energy) $node_(9) $opt(initialenergy)  $opt(txpower) $opt(rxpower)]
 set a_(9) [new Agent/UWSink]
 $ns_ attach-agent $node_(9) $a_(9)
-$a_(9) setTargetAddress 13
+$a_(9) cmd setTargetAddress 13
 $a_(9) attach-vectorbasedforward $opt(width)
 $a_(9) set-range 3500
 $a_(9) set-target-x   -5
@@ -375,8 +392,9 @@ $a_(9) set-target-y   5
 $a_(9) set-target-z   0
 $a_(9) set data_rate_  $opt(data_rate)
 $a_(9) set-packetsize $opt(packetsize)
-$a_(9) set-mactype 2
-$a_(9) set-filename $opt(dataname)
+$a_(9) set data_rate_bct $opt(datarate_bct)
+$a_(9) set-mactype 1
+$a_(9) set-filename test_802.data
 
 set node_(10) [$ns_  node 10]
 $god_ new_node $node_(10)
@@ -394,13 +412,15 @@ $ns_ attach-agent $node_(10) $a_(10)
 $a_(10) setTargetAddress 13
 $a_(10) attach-vectorbasedforward $opt(width)
 $a_(10) set-range 3500
+$a_(10) set data_rate_ 0.05
 $a_(10) set-target-x   -5
 $a_(10) set-target-y   5
 $a_(10) set-target-z   0
 $a_(10) set data_rate_  $opt(data_rate)
+$a_(10) set data_rate_bct $opt(datarate_bct)
 $a_(10) set-packetsize $opt(packetsize)
-$a_(10) set-mactype 2
-$a_(10) set-filename $opt(dataname)
+$a_(10) set-mactype 1
+$a_(10) set-filename test_802.data
 
 set node_(11) [$ns_  node 11]
 $god_ new_node $node_(11)
@@ -418,87 +438,82 @@ $ns_ attach-agent $node_(11) $a_(11)
 $a_(11) setTargetAddress 13
 $a_(11) attach-vectorbasedforward $opt(width)
 $a_(11) set-range 3500
+$a_(11) set data_rate_ 0.05
 $a_(11) set-target-x   -5
 $a_(11) set-target-y   5
 $a_(11) set-target-z   0
 $a_(11) set data_rate_ $opt(data_rate)
+$a_(11) set data_rate_bct $opt(datarate_bct)
 $a_(11) set-packetsize $opt(packetsize)
-$a_(11) set-mactype 2
-$a_(11) set-filename $opt(dataname)
+$a_(11) set-mactype 1
+$a_(11) set-filename test_802.data
 
 #move
 set node_(12) [$ns_  node 12]
 $god_ new_node $node_(12)
 #1750 3250
 #node 3 2500 4000
-$node_(12) set X_  1700
+$node_(12) set X_  [expr  1000+0.5*$opt(distance)]
 $node_(12) set Y_  6000
 $node_(12) set Z_   0
-$node_(12) set-cx  1700
+$node_(12) set-cx  [expr  1000+0.5*$opt(distance)]
 $node_(12) set-cy  6000
 $node_(12) set-cz  0
-$node_(12) set_next_hop 12;
+$node_(12) set_next_hop -1;
 $node_(12) random-motion 1
 $node_(12) ismobile 1
 $node_(12) addenergymodel [new $opt(energy) $node_(12) $opt(initialenergy)  $opt(txpower) $opt(rxpower)]
-$ns_ at 15.1 "$node_(12) setdest 1700 10 2.5"
+$ns_ at 15.1 "$node_(12) setdest [expr  1000+0.5*$opt(distance)] 10 2.5"
 set a_(12) [new Agent/UWSink]
 $ns_ attach-agent $node_(12) $a_(12)
 $a_(12) attach-vectorbasedforward $opt(width)
-$a_(12) setTargetAddress 12
+$a_(12) setTargetAddress -1
 $a_(12) set-range 3500
 $a_(12) set data_rate_ $opt(datarate_bct)
+$a_(12) set data_rate_bct $opt(datarate_bct)
 $a_(12) set-target-x   2400
 $a_(12) set-target-y   4000
 $a_(12) set-target-z   0
-$a_(12) set-packetsize 0
-$a_(12) set-mactype 2
-$a_(12) set-filename $opt(dataname)
+$a_(12) set-packetsize-bct $opt(packetsize_bct)
+$a_(12) set-mactype 1
+$a_(12) set-filename test_802.data
 
 set node_(13) [$ns_  node 13]
 $god_ new_node $node_(13)
-$node_(13) set X_  4700
+$node_(13) set X_  [expr  1000+2.5*$opt(distance)]
 $node_(13) set Y_  6000
 $node_(13) set Z_   0
-$node_(13) set-cx  4700
+$node_(13) set-cx  [expr  1000+2.5*$opt(distance)]
 $node_(13) set-cy  6000
 $node_(13) set-cz  0
 $node_(13) ismobile 1
-$node_(13) set_next_hop 13;
+$node_(13) set_next_hop -1;
 $node_(13) random-motion 1
 $node_(13) addenergymodel [new $opt(energy) $node_(13) $opt(initialenergy)  $opt(txpower) $opt(rxpower)]
-$ns_ at 15.1 "$node_(13) setdest 4700 10 2.5"
+$ns_ at 15.1 "$node_(13) setdest [expr  1000+2.5*$opt(distance)] 10 2.5"
 set a_(13) [new Agent/UWSink]
 $ns_ attach-agent $node_(13) $a_(13)
 $a_(13) attach-vectorbasedforward $opt(width)
-$a_(13) setTargetAddress 13
+$a_(13) setTargetAddress -1
 $a_(13) set-range 3500
 $a_(13) set data_rate_ $opt(datarate_bct)
+$a_(13) set data_rate_bct $opt(datarate_bct)
 $a_(13) set-target-x   -5
 $a_(13) set-target-y   5
 $a_(13) set-target-z   0
-$a_(13) set-packetsize 0
-$a_(13) set-mactype 2
-$a_(13) set-filename $opt(dataname)
+$a_(13) set-packetsize-bct $opt(packetsize_bct)
+$a_(13) set-mactype 1
+$a_(13) set-filename test_802.data
 
+#source scen_move
 
 #set max_num [expr $total_number -1]
 
 
 
-#$ns_ at $start_time "$a_($total_number) cbr-start"
-$ns_ at 15.1 "$a_(0) cbr-start"
-$ns_ at 17.1 "$a_(1) cbr-start"
-$ns_ at 19.1 "$a_(2) cbr-start"
-$ns_ at 21.1 "$a_(3) cbr-start"
-$ns_ at 23.1 "$a_(4) cbr-start"
-$ns_ at 25.1 "$a_(5) cbr-start"
-$ns_ at 15.1 "$a_(6) cbr-start"
-$ns_ at 17.1 "$a_(7) cbr-start"
-$ns_ at 19.1 "$a_(8) cbr-start"
-$ns_ at 21.1 "$a_(9) cbr-start"
-$ns_ at 23.1 "$a_(10) cbr-start"
-$ns_ at 25.1 "$a_(11) cbr-start"
+#$ns_ at $start_time "$a_(0) cbr-start"
+$ns_ at 15 "$a_(13) bct-start"
+$ns_ at 15 "$a_(12) bct-start"
 
 
 #$ns_ at 4 "$a_(0) cbr-start"
@@ -532,11 +547,9 @@ $ns_ at $opt(stop).001 "$a_(10) terminate"
 $ns_ at $opt(stop).001 "$a_(11) terminate"
 $ns_ at $opt(stop).001 "$a_(12) terminate"
 $ns_ at $opt(stop).001 "$a_(13) terminate"
-
-
 $ns_ at $opt(stop).003  "$god_ compute_energy"
 $ns_ at $opt(stop).004  "$ns_ nam-end-wireless $opt(stop)"
-#$ns_ at $opt(stop).005 "exec nam SFAMA.nam"
+#$ns_ at $opt(stop).005 "exec nam 802_11.nam"
 $ns_ at $opt(stop).005 "puts \"NS EXISTING...\"; $ns_ halt"
  
  puts $tracefd "vectorbased"

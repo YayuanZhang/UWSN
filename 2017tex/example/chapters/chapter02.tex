@@ -5,9 +5,15 @@
 \subsection{非竞争协议}
 \subsection{混合协议}
 \section{移动水声传感网络MAC协议研究现状}
-用于数据收集的混合MAC协议，RSV-MAC，CT-MAC\cite{A Hybrid MAC Protocol in Data-collection-oriented
-Underwater Acoustic Sensor Networks}
-通过邻近节点分组，在分组内用TDMA协议通信\cite{Multi-Cluster Protocol for Ad Hoc Mobile Underwater Acoustic Networks Oceans2003}
-并行发送\cite{DOTS: A Propagation Delay-Aware Opportunistic MAC Protocol for Mobile Underwater Networks} 毛佳\cite{LTM-MAC: A location-based TDMA MAC protocol for mobile underwater networks}
+根据移动水声网络的分布式特性和可扩展性，Francisco Salvá-Garau和Milica Stojanovic提出了多集群(Multi-CLuster)\cite{Multi-Cluster Protocol for Ad Hoc Mobile Underwater Acoustic Networks Oceans2003}MAC协议。将邻近节点分在一个集群中，在单个集群内使用统一的TDMA协议通信。不同集群间通过分配不同的扩频码来减少串扰、提高扩展性。协议分为两个阶段，首先在初始化阶段分配不同集群，然后是持续时间较长的稳定传输阶段。
+
+考虑到移动水声网络的低速率特性，Youngtae Noh和Uichin Lee等在2014年提出了DOTS(A Propagation Delay-Aware Opportunistic MAC Protocol for Mobile Underwater Networks)协议。通过被动获得的本能信息，如邻居节点传播时延表以及预期调度时序等，实现同一信道上多数据包并行发送。\cite{DOTS: A Propagation Delay-Aware Opportunistic MAC Protocol for Mobile Underwater Networks}
+
+对于有移动节点接入的小规模单跳传感网络，毛佳、徐元欣等提出了LTM-MAC(Location-based TDMA MAC protocol for mobile underwater networks)\cite{LTM-MAC: A location-based TDMA MAC protocol for mobile underwater networks}协议，给移动节点的接入分配了较高的优先级。对于移动节点接入的小规模多跳传感网络，提出了TMM-MAC协议(TDMA-based MAC for Multiple-hops in mobile underwater networks)。利用多跳特性，允许与移动节点互不干扰的固定节点并行发送数据,同时根据数据包长短设计不同的发送机制。
+
+基于移动节点进行数据收集的情景，邓敏、陈惠芳等人提出了混合MAC协议\cite{A Hybrid MAC Protocol in Data-collection-oriented
+	Underwater Acoustic Sensor Networks}，在低负载的子网中采用基于竞争的CT-MAC(ConTention-based MAC)，在高负载的子网中采用基于轮询调度的RSV-MAC(ReSerVation-based MAC)。
+
+
 
 \endinput

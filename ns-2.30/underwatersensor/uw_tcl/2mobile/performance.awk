@@ -14,12 +14,6 @@ BEGIN {
         {   
 		printf("%f ",$2);
 	}
-  if ($1=="SINK" && $2==0)
-	{
-		numsend=0;
-		numrecv=0;
-		cmudelay=0;
-	}
 
   if ($1=="SINK" && $2!=12 && $2!=13)
 	{

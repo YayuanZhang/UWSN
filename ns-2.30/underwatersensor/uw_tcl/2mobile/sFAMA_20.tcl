@@ -1,4 +1,4 @@
-set opt(data_rate)                       0.01
+set opt(data_rate)                       0.004
 set opt(max_backoff_slots)                4 
 set opt(packetsize)                      300
 set opt(datarate_bct)                    0.05
@@ -488,18 +488,18 @@ $a_(13) set-filename test_SF.data
 
 
 #$ns_ at $start_time "$a_($total_number) cbr-start"
-$ns_ at 15.1 "$a_(0) cbr-start"
-$ns_ at 15.1 "$a_(1) cbr-start"
-$ns_ at 15.1 "$a_(2) cbr-start"
-$ns_ at 15.1 "$a_(3) cbr-start"
-$ns_ at 15.1 "$a_(4) cbr-start"
-$ns_ at 15.1 "$a_(5) cbr-start"
-$ns_ at 15.1 "$a_(6) cbr-start"
-$ns_ at 15.1 "$a_(7) cbr-start"
-$ns_ at 15.1 "$a_(8) cbr-start"
-$ns_ at 15.1 "$a_(9) cbr-start"
-$ns_ at 15.1 "$a_(10) cbr-start"
-$ns_ at 15.1 "$a_(11) cbr-start"
+$ns_ at 19 "$a_(0) cbr-start"
+$ns_ at 240 "$a_(1) cbr-start"
+$ns_ at 1041 "$a_(2) cbr-start"
+$ns_ at 21 "$a_(3) cbr-start"
+$ns_ at 242 "$a_(4) cbr-start"
+$ns_ at 1043 "$a_(5) cbr-start"
+$ns_ at 29 "$a_(6) cbr-start"
+$ns_ at 433 "$a_(7) cbr-start"
+$ns_ at 1027 "$a_(8) cbr-start"
+$ns_ at 31 "$a_(9) cbr-start"
+$ns_ at 435 "$a_(10) cbr-start"
+$ns_ at 1029 "$a_(11) cbr-start"
 
 
 #$ns_ at 4 "$a_(0) cbr-start"
@@ -519,23 +519,23 @@ puts "+++++++AFTER ANNOUNCE++++++++++++++"
 
 
 
-$ns_ at $opt(stop).001 "$a_(0) terminate"
+$ns_ at 2052.001 "$a_(0) terminate"
 $ns_ at $opt(stop).001 "$a_(1) terminate"
 $ns_ at $opt(stop).001 "$a_(2) terminate"
-$ns_ at $opt(stop).001 "$a_(3) terminate"
+$ns_ at 2052.001 "$a_(3) terminate"
 $ns_ at $opt(stop).001 "$a_(4) terminate"
 $ns_ at $opt(stop).001 "$a_(5) terminate"
-$ns_ at $opt(stop).001 "$a_(6) terminate"
+$ns_ at 2029.001 "$a_(6) terminate"
 $ns_ at $opt(stop).001 "$a_(7) terminate"
 $ns_ at $opt(stop).001 "$a_(8) terminate"
-$ns_ at $opt(stop).001 "$a_(9) terminate"
+$ns_ at 2029.001 "$a_(9) terminate"
 $ns_ at $opt(stop).001 "$a_(10) terminate"
 $ns_ at $opt(stop).001 "$a_(11) terminate"
 $ns_ at $opt(stop).001 "$a_(12) terminate"
 $ns_ at $opt(stop).001 "$a_(13) terminate"
 
 
-$ns_ at $opt(stop).003  "$god_ compute_energy"
+$ns_ at $opt(stop).005  "$god_ compute_energy"
 $ns_ at $opt(stop).004  "$ns_ nam-end-wireless $opt(stop)"
 #$ns_ at $opt(stop).005 "exec nam SFAMA.nam"
 $ns_ at $opt(stop).005 "puts \"NS EXISTING...\"; $ns_ halt"
