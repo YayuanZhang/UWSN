@@ -1,0 +1,2 @@
+对于有移动节点接入的小规模单跳传感网络，提出了LTM-MAC(Location-based TDMA MAC protocol for mobile underwater networks)协议。给移动节点的接入分配了较高的优先级。
+移动节点接入的小规模多跳传感网络，提出了TMM-MAC协议(TDMA-based MAC for Multiple-hops in mobile underwater networks)。利用多跳特性，允许与移动节点互不干扰的固定节点并行发送数据,同时根据数据包长短设计不同的发送机制。
