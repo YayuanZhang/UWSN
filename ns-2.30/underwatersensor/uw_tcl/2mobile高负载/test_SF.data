@@ -1,0 +1,17 @@
+SINK 6 num_send 65 num_recv 1 cum_delay 0.000000
+SINK 9 num_send 64 num_recv 0 cum_delay 0.000000
+datarate 0.032000
+SINK 0 num_send 66 num_recv 1 cum_delay 0.000000
+SINK 3 num_send 65 num_recv 0 cum_delay 0.000000
+SINK 1 num_send 70 num_recv 0 cum_delay 0.000000
+SINK 2 num_send 44 num_recv 0 cum_delay 0.000000
+SINK 4 num_send 70 num_recv 0 cum_delay 0.000000
+SINK 5 num_send 44 num_recv 0 cum_delay 0.000000
+SINK 7 num_send 64 num_recv 0 cum_delay 0.000000
+SINK 8 num_send 45 num_recv 0 cum_delay 0.000000
+SINK 10 num_send 64 num_recv 0 cum_delay 0.000000
+SINK 11 num_send 45 num_recv 0 cum_delay 0.000000
+SINK 12 num_send 0 num_recv 134 cum_delay 47289.664464
+datarate_bct 0.050000
+SINK 13 num_send 0 num_recv 103 cum_delay 47493.583984
+God consumed_energy 31930.558000

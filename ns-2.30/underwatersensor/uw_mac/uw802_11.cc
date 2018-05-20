@@ -825,7 +825,6 @@ Macuw802_11::check_pktRTS()
     #endif
     struct hdr_macuw802_11 *mh;
     double timeout;
-
     assert(mhBackoff_.busy() == 0);
 
     if(pktRTS_ == 0)

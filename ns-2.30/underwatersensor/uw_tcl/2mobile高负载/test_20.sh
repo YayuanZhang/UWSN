@@ -2,7 +2,10 @@
 rm test_802.data
 rm test_SF.data
 rm test_ALOHA.data
-for ((i=1; i<=30; i++))
+rm plotdata_802
+rm plotdata_SF
+rm plotdata_ALOHA
+for ((i=2; i<=32; i++))
 do
      rate=`echo "scale=4; $i*0.001" | bc`
      sed "1c set opt(data_rate)    0$rate" 802_11_20.tcl >ch_datarate.tcl;
@@ -15,7 +18,7 @@ do
 done
 awk -f mul_average.awk plotdata_802 > UW802_11
 
-for ((i=1; i<=30; i++))
+for ((i=2; i<=32; i++))
 do
      rate=`echo "scale=4; $i*0.001" | bc`
      sed "1c set opt(data_rate)    0$rate" sFAMA_20.tcl >ch_datarate.tcl;
@@ -28,7 +31,7 @@ do
 done
 awk -f mul_average.awk plotdata_SF > SFAMA
 
-for ((i=1; i<=30; i++))
+for ((i=2; i<=32; i++))
 do
      rate=`echo "scale=4; $i*0.001" | bc`
      sed "1c set opt(data_rate)    0$rate" aloha_20.tcl >ch_datarate.tcl;

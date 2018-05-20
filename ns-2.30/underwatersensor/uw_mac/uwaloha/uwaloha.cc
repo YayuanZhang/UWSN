@@ -59,6 +59,7 @@ UWALOHA::UWALOHA(): UnderwaterMac(), bo_counter(0), UWALOHA_Status(PASSIVE), Per
 	bind("Min_Backoff",&Min_Backoff);
 	bind("Max_Backoff",&Max_Backoff);
 	bind("WaitACKTime",&WaitACKTime);
+    Persistent=0.5;
 }
 
 
