@@ -4,6 +4,16 @@
 
 % 仅用于测试
 \usepackage{blindtext}
+\usepackage{algorithm}  
+\usepackage{algorithmic} 
+\floatname{algorithm}{算法}
+\renewcommand{\algorithmicrequire}{\textbf{初始化}}   %改成后面的小标题
+\renewcommand{\algorithmicensure}{\textbf{确认}} 
+\renewcommand{\algorithmicif}{\textbf{如果}} 
+\renewcommand{\algorithmicthen}{\textbf{然后}} 
+\renewcommand{\algorithmicwhile}{\textbf{当}} 
+\renewcommand{\algorithmicend}{\textbf{结束}} 
+\renewcommand{\algorithmicelse}{\textbf{其他}}  
 
 \title{\textsf{比如我举个例子}}
 \author{{\kai 谁知道呢}}
@@ -47,7 +57,7 @@
 \input{chapters/chapter04.tex}
 \input{chapters/chapter05.tex}
 \input{chapters/chapter06.tex}
-
+\input{chapters/chapter07.tex}
 % 参考文献设置
 \clearpage
 \phantomsection

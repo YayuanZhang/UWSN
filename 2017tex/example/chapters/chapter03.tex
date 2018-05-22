@@ -2,6 +2,16 @@
 \section{UWALOHA}
 \subsection{原理}
 纯ALOHA协议的思想很简单，只要用户有数据要发送，就进行发送。这个流程容易产生冲突从而造成帧的破坏，但由于广播信道具有反馈性，因此发送方可以在发送数据的过程中进行冲突检测，将接收到的数据与缓冲区的数据进行比较，就可以知道数据帧是否遭到破坏。如果发送节点知道数据帧遭到破坏,即检测到冲突时，可以等待一段随机长的时间后重发该帧。
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.4]{figures/aloha.png}
+	\caption{
+		移动节点接入离开机制
+	}
+	\label{fig:example}
+\end{figure}
+
 \subsection{性能分析}
 \cite{Analysis of Aloha Protocols for Underwater Acoustic Sensor Networks}
 UWALHOHA协议数据发送成功指的是在t时刻，有且只有一个节点发送的数据到达，并且没有与其他数据产生碰撞的场景。这意味着如果一个数据要经过$\Delta t$时间传播，那么它不可以在$t-\Delta t$时间发送。
@@ -18,6 +28,16 @@ P_S=p(1-p)^{n-1}   0\le p\le 1
 
 \subsection{原理}
 当一个节点想要进行一次数据交互时，它会等待到下一个时隙时间开始传送RTS帧。目标节点和其他邻居节点会在当前时隙内接收到RTS帧。目标节点在下一个时隙开始时发送CTS帧，CTS帧会被源节点和目标节点的邻居节点接收到。源节点接收到CTS帧后，在下一个时隙时间传送DATA帧，其他邻居节点接收到CTS帧后进行退避。目标节点接收到全部数据后在下一个时隙时间发送ACK帧确认。
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.4]{figures/sf.png}
+	\caption{
+		移动节点接入离开机制
+	}
+	\label{fig:example}
+\end{figure}
+
 \subsection{性能分析}
 假设$P_S$是信道传输的成功（无碰撞）概率。无碰撞概率指的是在节点$\omega$传输的时间间隙内没有邻居节点进行传输的概率。邻居节点可能会传输RTS帧或者还没有被接收的CTS帧进而引起碰撞。例如节点$\alpha$是节点$\omega$和节点$\beta$的邻居节点，节点$\beta$是节点$\omega$的隐藏终端。节点$\alpha$在第$n-1$时隙内向节点$\beta$发送了RTS帧，节点$\omega$在第$n$时隙内向节点$\alpha$发送了RTS帧，那么节点$\omega$的RTS帧和节点$\alpha$要发送的CTS帧会在第n时隙产生冲突。
 

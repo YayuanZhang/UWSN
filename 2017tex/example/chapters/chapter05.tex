@@ -1,6 +1,90 @@
 \chapter{协议实现和性能分析}
 \section {协议实现}
 \subsection{协议流程}
+%    \begin{algorithm}  
+%    	\caption{Calculate $y = x^n$}   
+%    	\label{alg1}  
+%   	\begin{algorithmic} 	 
+%    		\REQUIRE $n \geq 0 \vee x \neq 0$   
+%    		\ENSURE $y = x^n$   
+%    		\STATE $y \Leftarrow 1$   
+%    		\IF{$n < 0$}   
+%    		\STATE $X \Leftarrow 1 / x$   
+%   		\STATE $N \Leftarrow -n$   
+%    		\ELSE   
+%    		\STATE $X \Leftarrow x$   
+%    		\STATE $N \Leftarrow n$  
+%    		\ENDIF   
+%    		\WHILE{$N \neq 0$}   
+%   		\IF{$N$ is even}   
+%    		\STATE $X \Leftarrow X \times X$   
+%    		\STATE $N \Leftarrow N / 2$   
+%    		\ELSE[$N$ is odd]   
+%    		\STATE $y \Leftarrow y \times X$   
+%    		\STATE $N \Leftarrow N - 1$   
+%    		\ENDIF   
+%    		\ENDWHILE  
+%    	\end{algorithmic}  
+%    \end{algorithm}  
+
+状态转移图
+RXSTATE
+
+ \begin{figure}[!ht]
+ 	\centering
+ 	\includegraphics[scale=0.5]{figures/rxstate.png}
+ 	\caption{
+ 		rxstate
+ 	}
+ 	\label{fig:example}
+ \end{figure}
+ 
+\begin{table}[!ht]
+	\centering
+\begin{tabular}{c c c}
+	\hline  % 在表格最上方绘制横线
+	 &状态转移条件&执行的操作\\
+	\hline  % 在表格最上方绘制横线
+	1&节点空闲状态下侦听到包 & 接收包到pktRx\_\\
+	2&节点接收状态下收到其他包，不满足接收条件&节点状态置为冲突状态，清空pktRx\_\\
+	3&在接收状态下收到其他包，满足接收条件&节点设置NAV推迟接入，接收新包到pktRx\_，接收完毕后节点状态置为空闲\\
+	4&在冲突状态下收到其他包，不满足接收条件&节点状态仍为冲突状态，清空pktRx\_\\
+	5&在接收状态下接收完到达包以后&节点状态置为空闲\\	
+	6&在冲突状态下收到其他包，满足接收条件&节点设置NAV推迟接入，接收新包到pktRx\_，接收完毕后节点状态置为空闲\\
+	\hline
+\end{tabular}
+\end{table}
+
+txstate
+ \begin{figure}[!ht]
+ 	\centering
+ 	\includegraphics[scale=0.5]{figures/txstate.png}
+ 	\caption{
+ 		txstate
+ 	}
+ 	\label{fig:example}
+ \end{figure}
+ 
+\begin{table}[!ht]
+	\centering
+	\begin{tabular}{c c c}
+		\hline  % 在表格最上方绘制横线
+		&状态转移条件&执行的操作\\
+		\hline  % 在表格最上方绘制横线
+		1&节点准备开始一次数据传输 &准备pktRTS\_、pktTx\_，节点状态置为RTS\\
+		2&RTS状态下接收到RTS、DATA、ACK、BCT包&节点状态不变，丢弃除BCT以外的接收到的包\\
+		3&RTS状态下接收到CTS包清空pktRTS\_后或RTS状态超时&发送状态置为空闲，开始下一次发送\\
+		4&接收完RTS包，发送状态空闲&准备pktCTRL\_，发送状态置为CTS，发送CTS包\\
+		5&CTS状态下接收到DATA包清空pktCTRL\_后或CTS状态超时&发送状态置为空闲，开始下一次发送\\
+		6&CTS状态下接收到RTS、CTS、ACK、BCT包&节点状态不变，丢弃除BCT以外的接收到的包\\
+		7&接收完CTS包，发送状态空闲&准备pktTx\_发送状态置为MAC\_SEND，发送DATA包\\
+		8&SEND状态下接收到ACK包清空pktTx\_后或SEND状态超时&发送状态置为空闲，开始下一次发送\\
+		9&SEND状态下接收到RTS、CTS、DATA、BCT包&节点状态不变，丢弃除BCT以外的接收到的包\\
+		10&接收完DATA包，发送状态空闲&准备pktCTRL\_，发送状态置为ACK，发送ACK包\\
+		11&ACK发送完成&发送状态置为空闲，开始下一次发送\\
+		\hline
+	\end{tabular}
+\end{table}
 
 \subsection{帧格式}
 BCT\\
