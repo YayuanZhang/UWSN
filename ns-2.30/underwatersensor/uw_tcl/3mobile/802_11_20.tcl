@@ -165,6 +165,7 @@ $a_(0) set-target-x   -5
 $a_(0) set-target-y   5
 $a_(0) set-target-z   0
 $a_(0) set data_rate_  $opt(data_rate)
+$a_(0) set data_rate_bct $opt(datarate_bct)
 $a_(0) set-packetsize $opt(packetsize)
 $a_(0) set-mactype 1
 $a_(0) set-filename test_802.data

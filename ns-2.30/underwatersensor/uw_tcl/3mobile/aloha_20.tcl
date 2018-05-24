@@ -507,18 +507,18 @@ $a_(14) set-packetsize 0
 $a_(14) set-mactype 2
 $a_(14) set-filename $opt(dataname)
 
-$ns_ at 15.1 "$a_(0) cbr-start"
-$ns_ at 17.1 "$a_(1) cbr-start"
-$ns_ at 19.1 "$a_(2) cbr-start"
-$ns_ at 21.1 "$a_(3) cbr-start"
-$ns_ at 23.1 "$a_(4) cbr-start"
-$ns_ at 25.1 "$a_(5) cbr-start"
-$ns_ at 15.1 "$a_(6) cbr-start"
-$ns_ at 17.1 "$a_(7) cbr-start"
-$ns_ at 19.1 "$a_(8) cbr-start"
-$ns_ at 21.1 "$a_(9) cbr-start"
-$ns_ at 23.1 "$a_(10) cbr-start"
-$ns_ at 25.1 "$a_(11) cbr-start"
+$ns_ at 22.1 "$a_(0) cbr-start"
+$ns_ at 123.8 "$a_(1) cbr-start"
+$ns_ at 905 "$a_(2) cbr-start"
+$ns_ at 22 "$a_(3) cbr-start"
+$ns_ at 140 "$a_(4) cbr-start"
+$ns_ at 21 "$a_(5) cbr-start"
+$ns_ at 17 "$a_(6) cbr-start"
+$ns_ at 140 "$a_(7) cbr-start"
+$ns_ at 21 "$a_(8) cbr-start"
+$ns_ at 17 "$a_(9) cbr-start"
+$ns_ at 225 "$a_(10) cbr-start"
+$ns_ at 893 "$a_(11) cbr-start"
 
 
 
@@ -534,7 +534,7 @@ puts "+++++++AFTER ANNOUNCE++++++++++++++"
 
 
 
-$ns_ at $opt(stop).001 "$a_(0) terminate"
+$ns_ at 1722.001 "$a_(0) terminate"
 $ns_ at $opt(stop).001 "$a_(1) terminate"
 $ns_ at $opt(stop).001 "$a_(2) terminate"
 $ns_ at $opt(stop).001 "$a_(3) terminate"
@@ -543,8 +543,8 @@ $ns_ at $opt(stop).001 "$a_(5) terminate"
 $ns_ at $opt(stop).001 "$a_(6) terminate"
 $ns_ at $opt(stop).001 "$a_(7) terminate"
 $ns_ at $opt(stop).001 "$a_(8) terminate"
-$ns_ at $opt(stop).001 "$a_(9) terminate"
-$ns_ at $opt(stop).001 "$a_(10) terminate"
+$ns_ at 1717.001 "$a_(9) terminate"
+$ns_ at $opt(stop).001  "$a_(10) terminate"
 $ns_ at $opt(stop).001 "$a_(11) terminate"
 $ns_ at $opt(stop).001 "$a_(12) terminate"
 $ns_ at $opt(stop).001 "$a_(13) terminate"

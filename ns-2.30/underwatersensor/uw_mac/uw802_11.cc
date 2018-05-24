@@ -4,7 +4,7 @@
 #include "random.h"
 #include "mobilenode.h"
 
-//#define DEBUG 99
+// #define DEBUG 99
 //#define DEBUG_LUV
 #include "arp.h"
 #include "ll.h"
@@ -126,14 +126,9 @@ Macuw802_11::transmit(Packet *p, double timeout)
         }
     }
     downtarget_->recv(p->copy(), this);
-    printf("timeout %lf txtime %lf \n",timeout,txtime(p));
     mhSend_.start(timeout);
     mhIF_.start(txtime(p));
-    hdr_cmn *ch=HDR_CMN(p);
-    if (ch->pkt_flag==1)
-    sendDATA(stored2);
 }
-
 inline void
 Macuw802_11::setRxState(MacState newState)
 {
@@ -182,7 +177,7 @@ PHY_MIB::PHY_MIB(Macuw802_11 *parent)
     parent->bind("PreambleLength_", &PreambleLength);
     parent->bind("PLCPHeaderLength_", &PLCPHeaderLength);
     parent->bind_bw("PLCPDataRate_", &PLCPDataRate);
-    SlotTime=0.5;//0.0002
+    SlotTime=0.2;//0.0002
     SIFSTime=0.1;//0.0001
     //printf("bind PreambleLength %lf\n",PreambleLength);
     //printf("bind PLCPHeaderLength %lf\n",PLCPHeaderLength);
@@ -553,7 +548,6 @@ Macuw802_11::collision(Packet *p)
 void
 Macuw802_11::tx_resume()
 {
-
     printf("node %d tx_resume at %lf\n",index_,NOW);
     double rTime;
     assert(mhSend_.busy() == 0);
@@ -562,7 +556,6 @@ Macuw802_11::tx_resume()
         /*
          *  Need to send a CTS or ACK.
          */
-        printf("1114\n");
         mhDefer_.start(phymib_.getSIFS());
     } else if(pktRTS_) {
         if (mhBackoff_.busy() == 0) {
@@ -573,7 +566,6 @@ Macuw802_11::tx_resume()
             else {
                 rTime = (Random::random() % cw_) *
                     phymib_.getSlotTime();
-                printf("1115\n");
                 mhDefer_.start( phymib_.getDIFS() + rTime);
             }
         }
@@ -591,18 +583,14 @@ Macuw802_11::tx_resume()
                 else {
                     rTime = (Random::random() % cw_)
                         * phymib_.getSlotTime();
-                    printf("11116\n");
                     mhDefer_.start(phymib_.getDIFS() +
                                rTime);
                 }
                         } else {
-
                 mhDefer_.start(phymib_.getSIFS());
-
                         }
         }
     } else if(callback_) {
-        printf("callback\n");
         Handler *h = callback_;
         callback_ = 0;
         h->handle((Event*) 0);
@@ -672,7 +660,9 @@ Macuw802_11::navHandler()
 void
 Macuw802_11::recvHandler()
 {
+    #ifdef DEBUG_LUV
     printf("node %d at %lf recvHandler\n",index_,NOW);
+    #endif
     recv_timer();
     UnderwaterSensorNode* n=(UnderwaterSensorNode*) node_;
     n->SetTransmissionStatus(IDLEE);
@@ -681,7 +671,9 @@ Macuw802_11::recvHandler()
 void
 Macuw802_11::sendHandler()
 {
+   #ifdef DEBUG_LUV
     printf("node %d at %lf sendHandler\n",index_,NOW);
+    #endif
     send_timer();
 }
 
@@ -689,9 +681,10 @@ Macuw802_11::sendHandler()
 void
 Macuw802_11::txHandler()
 {
+    #ifdef DEBUG_LUV
     printf("node %d at %lf txHandler\n",index_,NOW);
+    #endif
     if (EOTtarget_) {
-        printf("eottarget\n");
         assert(eotPacket_);
         EOTtarget_->recv(eotPacket_, (Handler *) 0);
         eotPacket_ = NULL;
@@ -699,6 +692,7 @@ Macuw802_11::txHandler()
     tx_active_ = 0;
     UnderwaterSensorNode* n=(UnderwaterSensorNode*) node_;
     n->SetTransmissionStatus(IDLEE);
+
 }
 
 
@@ -709,7 +703,6 @@ Macuw802_11::txHandler()
 void
 Macuw802_11::send_timer()
 {
-    printf("send_timer\n");
     switch(tx_state_) {
     /*
      * Sent a RTS, but did not receive a CTS.
@@ -759,12 +752,9 @@ Macuw802_11::check_pktCTRL()
     double timeout;
 
     if(pktCTRL_ == 0)
-      {  printf("pktCTRL_ == 0\n");
-         return -1; }
+        return -1;
     if(tx_state_ == MAC_CTS || tx_state_ == MAC_ACK)
-       {
-         printf("tx_state_ == MAC_CTS || tx_state_ == MAC_ACK \n");
-         return -1; }
+        return -1;
 
     mh = HDR_MACUW802_11(pktCTRL_);
     switch(mh->dh_fc.fc_subtype) {
@@ -791,7 +781,6 @@ Macuw802_11::check_pktCTRL()
                         + sec(mh->dh_duration)
                         + DSSS_MaxPropagationDelay                      // XXX
                         + txtime(400, basicRate_)
-                        +9
                        - phymib_.getSIFS()
                        - txtime(phymib_.getACKlen(), basicRate_);
         break;
@@ -825,6 +814,7 @@ Macuw802_11::check_pktRTS()
     #endif
     struct hdr_macuw802_11 *mh;
     double timeout;
+
     assert(mhBackoff_.busy() == 0);
 
     if(pktRTS_ == 0)
@@ -872,7 +862,6 @@ Macuw802_11::check_pktTx()
     printf("node %d check_pktTx at %lf\n",index_,NOW);
     #endif
     struct hdr_macuw802_11 *mh;
-    struct hdr_cmn *cmh;
     double timeout;
 
     assert(mhBackoff_.busy() == 0);
@@ -881,7 +870,7 @@ Macuw802_11::check_pktTx()
         return -1;
 
     mh = HDR_MACUW802_11(pktTx_);
-    cmh = HDR_CMN(pktTx_);
+
     switch(mh->dh_fc.fc_subtype) {
     case MAC_Subtype_Data:
         if(! is_idle()) {
@@ -895,16 +884,11 @@ Macuw802_11::check_pktTx()
         #endif
         setTxState(MAC_SEND);
         if((u_int32_t)ETHER_ADDR(mh->dh_ra) != MAC_BROADCAST)
-        {
-            if(cmh->pkt_flag ==1)
-                timeout=txtime(pktTx_);
-            else
-                timeout = txtime(pktTx_)
-                           + DSSS_MaxPropagationDelay              // XXX
+                        timeout = txtime(pktTx_)
+                                + DSSS_MaxPropagationDelay              // XXX
                                + phymib_.getSIFS()
                                + txtime(phymib_.getACKlen(), basicRate_)
                                + DSSS_MaxPropagationDelay;             // XXX
-        }
         else
             timeout = txtime(pktTx_);
         break;
@@ -978,9 +962,6 @@ Macuw802_11::sendRTS(int dst)
                    + phymib_.getSIFS()
                                + txtime(pktTx_)
                    + phymib_.getSIFS()
-                               + txtime(pktTx_)
-                   + phymib_.getSIFS()
-                   +9
                    + txtime(phymib_.getACKlen(), basicRate_));
     pktRTS_ = p;
 }
@@ -1124,6 +1105,7 @@ Macuw802_11::sendDATA(Packet *p)
     }
     pktTx_ = p;
 
+
 }
 
 /* ======================================================================
@@ -1137,6 +1119,7 @@ Macuw802_11::RetransmitRTS()
     assert(pktRTS_);
     assert(mhBackoff_.busy() == 0);
     macmib_.RTSFailureCount++;
+
 
     ssrc_ += 1;			// STA Short Retry Count
 
@@ -1187,12 +1170,11 @@ Macuw802_11::RetransmitDATA()
 
     ch = HDR_CMN(pktTx_);
     mh = HDR_MACUW802_11(pktTx_);
-    printf("retrans data no %d\n",ch->pkt_flag);
+
     /*
      *  Broadcast packets don't get ACKed and therefore
      *  are never retransmitted.
      */
-
     if((u_int32_t)ETHER_ADDR(mh->dh_ra) == MAC_BROADCAST) {
         Packet::free(pktTx_);
         pktTx_ = 0;
@@ -1209,7 +1191,7 @@ Macuw802_11::RetransmitDATA()
     macmib_.ACKFailureCount++;
 
     if((u_int32_t) ch->size() <= macmib_.getRTSThreshold()) {
-                        rcount = &ssrc_;
+                rcount = &ssrc_;
                thresh = macmib_.getShortRetryLimit();
         } else {
                 rcount = &slrc_;
@@ -1241,12 +1223,11 @@ Macuw802_11::RetransmitDATA()
         struct hdr_macuw802_11 *dh;
         dh = HDR_MACUW802_11(pktTx_);
         dh->dh_fc.fc_retry = 1;
-     /*   sendRTS(ETHER_ADDR(mh->dh_ra));
+
+
+        sendRTS(ETHER_ADDR(mh->dh_ra));
         inc_cw();
-        printf("cw: %d\n",cw_);
-        mhBackoff_.start(cw_, is_idle());*/
-     //add by aloe
-     //tx_resume();
+        mhBackoff_.start(cw_, is_idle());
     }
 }
 
@@ -1256,63 +1237,44 @@ Macuw802_11::RetransmitDATA()
 void
 Macuw802_11::send(Packet *p, Handler *h)
 {
-    struct hdr_cmn* cmh=HDR_CMN(p);
-    struct hdr_uwvb* vbh = HDR_UWVB(p);
-    printf("no %d",vbh->pk_num);
-    callback_ = h;
-   if (cmh->mobibct_flag_==0)
-  {
-        if (sendcount==1)
-      {
-        cmh->pkt_flag=2;
-        sendcount=0;
-        printf("send 2\n");
-       }
-       else if (sendcount==0)
-        {
-            stored=p->copy();
-            struct hdr_cmn *h1=HDR_CMN(stored);
-            h1->pkt_flag=1;
-            Packet::free(p);
-            sendcount=1;
-            printf("stored 1 packet\n");
-            tx_resume();
-            return;
-        }
-    }
-   else cmh->pkt_flag=3;
-   // stored=p->copy();
     UnderwaterSensorNode* n=(UnderwaterSensorNode*) node_;
     //n->SetTransmissionStatus(SENDE);
+    struct hdr_cmn* cmh=HDR_CMN(p);
     printf("node %d UW802 packetsize_ %d\n",index_,cmh->size());
+   #ifdef DEBUG_LUV
+    printf("flag %d mb1",cmh->mobibct_flag_);
+    printf("node %d 802_11 send at %lf\n",index_,NOW);
+    #endif
     double rTime;
-    struct hdr_macuw802_11* dh;
-    if(cmh->mobibct_flag_==0)
-  {      dh = HDR_MACUW802_11(stored);
+    struct hdr_macuw802_11* dh = HDR_MACUW802_11(p);
+    // add by luv
     if (n->setHopStatus){
      hdr_dst((char*)dh,n->next_hop);
      //vbh->target_id.addr_ = cmh->next_hop();
+    #ifdef DEBUG_LUV
+     printf("uw802_11:node %d set next hop to %d\n",index_,n->next_hop);
+   #endif
     }
+    else
+    {
+        #ifdef DEBUG_LUV
+        printf("test noed %d to %d\n",index_,n->next_hop);
+       #endif
     }
-        dh = HDR_MACUW802_11(p);
-  if (n->setHopStatus){
-         hdr_dst((char*)dh,n->next_hop);
-         //vbh->target_id.addr_ = cmh->next_hop();
-        }
+
 
   /*  EnergyModel *em = netif_->node()->energy_model();
     if (em && em->sleep()) {
         em->set_node_sleep(0);
         em->set_node_state(EnergyModel::INROUTE);
     }*/
-    if(cmh->mobibct_flag_==0)
-      {
-        sendDATA(stored);
-        stored2=p->copy();
-    }
-    else
-       sendDATA(p);
-    if ((cmh->mobibct_flag_)==0)
+    callback_ = h;
+    sendDATA(p);
+    hdr_cmn* cmh2=HDR_CMN(p);
+    #ifdef DEBUG_LUV
+    printf("flag %d mb",cmh2->mobibct_flag_);
+    #endif
+    if ((cmh2->mobibct_flag_)==0)
     {
         sendRTS(ETHER_ADDR(dh->dh_ra));
     }
@@ -1354,14 +1316,14 @@ Macuw802_11::send(Packet *p, Handler *h)
             mhBackoff_.start(cw_, is_idle());
         }
     }
-
 }
 
 void
 Macuw802_11::recv(Packet *p, Handler *h)
 {
-
+    #ifdef DEBUG_LUV
     printf("node %d 802_11 recv at %lf\n",index_,NOW);
+    #endif
     struct hdr_cmn *hdr = HDR_CMN(p);
 
     /*
@@ -1400,7 +1362,6 @@ Macuw802_11::recv(Packet *p, Handler *h)
      */
     if(tx_active_ && hdr->error() == 0) {
         hdr->error() = 1;
-        printf("error\n");
     }
 
     if(rx_state_ == MAC_IDLE) {
@@ -1430,7 +1391,9 @@ Macuw802_11::recv(Packet *p, Handler *h)
 void
 Macuw802_11::recv_timer()
 {
-
+    #ifdef DEBUG_LUV
+    printf("node %d recvtimer",index_);
+    #endif
     u_int32_t src;
     hdr_cmn *ch = HDR_CMN(pktRx_);
     hdr_macuw802_11 *mh = HDR_MACUW802_11(pktRx_);
@@ -1561,7 +1524,6 @@ Macuw802_11::recvRTS(Packet *p)
     struct rts_frame *rf = (struct rts_frame*)p->access(hdr_mac::offset_);
     printf("node %d revRTS from %d at %lf\n",index_,ETHER_ADDR(rf->rf_ta),NOW);
     if(tx_state_ != MAC_IDLE) {
-        printf("tx_state_ != MAC_IDLE\n");
         discard(p, DROP_MAC_BUSY);
         return;
     }
@@ -1570,7 +1532,6 @@ Macuw802_11::recvRTS(Packet *p)
      *  If I'm responding to someone else, discard this RTS.
      */
     if(pktCTRL_) {
-        printf("responding to someone else\n");
         discard(p, DROP_MAC_BUSY);
         return;
     }
@@ -1628,6 +1589,7 @@ Macuw802_11::txtime(double psz, double drt)
 void
 Macuw802_11::recvCTS(Packet *p)
 {
+
     printf("node %d recvCTS at %lf\n",index_,NOW);
     if(tx_state_ != MAC_RTS) {
         #ifdef DEBUG_LUV
@@ -1663,6 +1625,7 @@ Macuw802_11::recvDATA(Packet *p)
     struct hdr_macuw802_11 *dh = HDR_MACUW802_11(p);
     u_int32_t dst, src, size;
     struct hdr_cmn *ch = HDR_CMN(p);
+
     dst = ETHER_ADDR(dh->dh_ra);
     src = ETHER_ADDR(dh->dh_ta);
     size = ch->size();
@@ -1681,10 +1644,10 @@ Macuw802_11::recvDATA(Packet *p)
         //assert(pktCTRL_);
         //Packet::free(pktCTRL_); pktCTRL_ = 0;
         printf("acceptDATA from mobile\n");
-        //mhSend_.stop();
+        mhSend_.stop();
         //ssrc_=0;
         //pktTx_=0;
-        //tx_resume();
+        tx_resume();
         uptarget_->recv(p, this);
         return;
     }
@@ -1693,17 +1656,14 @@ Macuw802_11::recvDATA(Packet *p)
 
        ch->size() -= phymib_.getHdrLen11();
         ch->num_forwards() += 1;
-         hdr_cmn *cmh=HDR_CMN(p);
-         printf("recv no %d\n",cmh->pkt_flag);
     /*
      *  If we sent a CTS, clean up...
      */    if(dst != MAC_BROADCAST) {
         if(size >= macmib_.getRTSThreshold()) {
             if (tx_state_ == MAC_CTS) {
-                if (cmh->pkt_flag == 2)
-               { assert(pktCTRL_);
+                assert(pktCTRL_);
                 Packet::free(pktCTRL_); pktCTRL_ = 0;
-                mhSend_.stop();}
+                mhSend_.stop();
                 /*
                  * Our CTS got through.
                  */
@@ -1711,18 +1671,9 @@ Macuw802_11::recvDATA(Packet *p)
                 discard(p, DROP_MAC_BUSY);
                 return;
             }
-
-            printf("acceptDATA no %d\n", cmh->pkt_flag);
-            if(cmh->pkt_flag == 2)
-            {
-                sendACK(src);
-             }
-            else if(cmh->pkt_flag == 1)
-            { uptarget_->recv(p, (Handler*) 0);
-                return;
-            }
-           tx_resume();
-
+            printf("acceptDATA\n");
+            sendACK(src);
+            tx_resume();
         } else {
             /*
              *  We did not send a CTS and there's no
@@ -1848,5 +1799,4 @@ Macuw802_11::recvACK(Packet *p)
     tx_resume();
 
     mac_log(p);
-
 }

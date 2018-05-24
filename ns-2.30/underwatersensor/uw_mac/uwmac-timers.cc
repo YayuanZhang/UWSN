@@ -76,7 +76,7 @@ void
 DeferTimer::start(double time)
 {
     Scheduler &s = Scheduler::instance();
-printf("1111\n");
+
     assert(busy_ == 0);
 
     busy_ = 1;
@@ -87,9 +87,8 @@ printf("1111\n");
     ROUND_TIME();
 #endif
     assert(rtime >= 0.0);
-printf("1112\n");
+
     s.schedule(this, &intr, rtime);
-    printf("1113\n");
 }
 
 
@@ -148,6 +147,8 @@ TxTimer::handle(Event *)
     stime = 0.0;
     rtime = 0.0;
 
+
+
     mac->sendHandler();
 }
 
@@ -201,7 +202,6 @@ BackoffTimer::start(int cw, int idle, double difs)
         paused_ = 1;
     else {
         assert(rtime + difs_wait >= 0.0);
-        printf("back off %lf\n",rtime + difs_wait);
         s.schedule(this, &intr, rtime + difs_wait);
     }
 }
