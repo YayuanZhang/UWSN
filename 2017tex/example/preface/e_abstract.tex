@@ -3,25 +3,26 @@
 
 \chapter[ABSTRACT(英文摘要)]{ABSTRACT}
 \markboth{英~文~摘~要}{英~文~摘~要}
+%\noindent 
+The networking technology of mobile underwater acoustic sensor networks is one of the important reserch topics of underwater acoustic sensor networks(UWASN). Using acoustic wave as the propagation medium, underwater communicatione owned characteristics of high bit error rates and unreliability. Meanwhile, the high dynamic nature of the network topology brought by mobile nodes causes various challenges in the development and design of UWASN. For ocean resource exporlation and national marine security, it is a very important problem to develop the UWASN and its appilication.
 
-\noindent ............
+The UWASN can be divided into three layers: network layer, data link layer, and physical layer. The data link layer plays a vital role in providing reliable links for upper-layer network protocols. It can be divided into logical link layer (LLC) and media access control layer (MAC). This paper focuses on the  media access control(MAC) protocols in the UWASN
 
-\noindent SSSSSSS
+After analyzing the classification and research status of the current MAC protocol for UWASN, the paper proposes a protocol for the use case of a single-hop UWASN in which mobile nodes collect data from multiple fixed nodes.
+The protocol called PAMC-M for Mobile UWASN is playload adaptive and based on MACA and CSMA.Performance analysis and simulation verification show that the proposed protocol performs well compared with the traditional contention-based protocol UWALOHA and SFAMA.
 
-\noindent To sum up, this paper works on those
+\noindent The main results of the paper are as follows:
 \vspace{-12pt}
 \begin{enumerate} \setlength{\itemsep}{0pt}
-	\item Balabala 1
-	\item Balabala 12
-	\item Balabala 123
-	\item Balabala 1234
-	\item Balabala 12345
+	\item For the scenario where a small number of mobile nodes access a network composed of fixed nodes and collect data from fixde nodes, a mobile node access mechanism is designed. Mobile node periodically send broadcast frames(BCT) and fixed nodes execute corresponding processing according to the received frame. The design of the broadcast frame enables mobile nodes to access the network at a small cost.
+	\item Considering unreliability of mobile UWASN, a data frame retransmission mechanism was proposed. Retransmiting data frame immediately instead of making handshake once again, will greatly improve the transmition efficiency. 
+	\item The collision probability becomes larger with the network load increases.Thus, an adaptive load-adaptive data frame transmission mechanism is proposed. The data frame is transmitted once after one handshake in the low-load mode, twice in the high-load mode. Performance analysis and simulation show that the adaptive load-adaptive transmission mechanism makes the protocol perform well under different network loads, improving network throughput and reducing transmission delay.
+
 \end{enumerate}
 \vspace{-12pt}
 
-
 \vspace{1em}
-\noindent {\textbf{Key Words:}} \quad thesis, template, \LaTeX
+\noindent {\textbf{Key Words:}} \quad Underwater acoustic sensor network, Media access control, Competitive MAC protocol, Mobile node access, Load adaptivity
 
 \clearpage
 \endinput
