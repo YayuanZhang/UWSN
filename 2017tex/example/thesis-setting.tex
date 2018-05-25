@@ -201,14 +201,13 @@
 \renewcommand{\contentsname}{目~录}
 \newcommand{\keywords}[1]{\\ \\ \textbf{关~键~词}：#1}
 
-
-\titleformat{\chapter}[hang]{\normalfont\sSanhao\filcenter\fHei\bf}%
-    {\sSanhao{\chaptertitlename}}{20pt}{\sSanhao}
-\titleformat{\section}[hang]{\fHei \bf \sSihao}%
+\titleformat{\chapter}[block]{\normalfont\sSanhao\filcenter\fHei\bf}%
+    {\sSanhao {第\CJKnumber{\thechapter}章}}{0.5em}{\sSanhao}
+\titleformat{\section}[block]{\fHei \bf \sSihao}%
     {\sSihao \thesection}{0.5em}{}{}
-\titleformat{\subsection}[hang]{\fHei \bf \sHalfXiaosi}%
+\titleformat{\subsection}[block]{\fHei \bf \sHalfXiaosi}%
     {\sHalfXiaosi \thesubsection}{0.5em}{}{}
-\titleformat{\subsubsection}[hang]{\fHei \bf}%
+\titleformat{\subsubsection}[block]{\fHei \bf}%
     {\thesubsubsection }{0.5em}{}{}
 
 
