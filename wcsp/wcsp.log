@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.5.2)  21 JUN 2018 01:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.5.2)  21 JUN 2018 02:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -451,11 +451,11 @@ Underfull \hbox (badness 6125) in paragraph at lines 68--69
 []\OT1/ptm/m/n/10 In this sec-tion, the pro-to-col model is in-tro-duced.
  []
 
-<figures/1.pdf, id=1, 1927.2pt x 569.12625pt>
+<figures/1.pdf, id=1, 1927.2pt x 426.59375pt>
 File: figures/1.pdf Graphic file (type pdf)
  <use figures/1.pdf>
 Package pdftex.def Info: figures/1.pdf used on input line 74.
-(pdftex.def)             Requested size: 289.06754pt x 85.36525pt.
+(pdftex.def)             Requested size: 231.25403pt x 51.18903pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
@@ -466,22 +466,21 @@ File: figures/3.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/3.pdf used on input line 99.
 (pdftex.def)             Requested size: 289.06754pt x 85.36525pt.
 
-<figures/2.pdf, id=12, 1927.2pt x 569.12625pt>
+<figures/2.pdf, id=12, 1927.2pt x 426.59375pt>
 File: figures/2.pdf Graphic file (type pdf)
  <use figures/2.pdf>
 Package pdftex.def Info: figures/2.pdf used on input line 109.
-(pdftex.def)             Requested size: 269.80617pt x 79.67712pt.
+(pdftex.def)             Requested size: 231.25403pt x 51.18903pt.
 Missing character: There is no ï in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 Missing character: There is no Œ in font ptmr7t!
 
-<figures/hidden.pdf, id=13, 796.9775pt x 597.23125pt>
-File: figures/hidden.pdf Graphic file (type pdf)
- <use figures/hidden.pdf>
-Package pdftex.def Info: figures/hidden.pdf used on input line 138.
+<figures/6.pdf, id=13, 796.9775pt x 597.23125pt>
+File: figures/6.pdf Graphic file (type pdf)
+ <use figures/6.pdf>
+Package pdftex.def Info: figures/6.pdf used on input line 138.
 (pdftex.def)             Requested size: 79.70241pt x 59.72661pt.
-
-[2 <./figures/1.pdf> <./figures/3.pdf
+ [2 <./figures/1.pdf> <./figures/3.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./figures/3.pdf): PDF inclusion: multip
 le pdfs with page group included in a single page
@@ -494,24 +493,20 @@ Missing character: There is no ï in font ptmr7t!
 Missing character: There is no ¼ in font ptmr7t!
 Missing character: There is no Œ in font ptmr7t!
 \c@mytempeqncnt=\count121
- [3 <./figures/hidden.pdf>]
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
+[3 <./figures/6.pdf>]
 Underfull \hbox (badness 6658) in paragraph at lines 317--318
 []\OT1/ptm/m/n/10 We also make per-for-mance com-par-isons with two
  []
 
-<figures/2scen.pdf, id=83, 796.9775pt x 597.23125pt>
+<figures/2scen.pdf, id=78, 796.9775pt x 597.23125pt>
 File: figures/2scen.pdf Graphic file (type pdf)
  <use figures/2scen.pdf>
 Package pdftex.def Info: figures/2scen.pdf used on input line 324.
 (pdftex.def)             Requested size: 199.24388pt x 149.30743pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 Package epstopdf Info: Source file: <figures/lilun.eps>
 (epstopdf)                    date: 2018-06-20 10:04:17
 (epstopdf)                    size: 25342 bytes
@@ -522,17 +517,14 @@ Package epstopdf Info: Source file: <figures/lilun.eps>
 d-to.pdf figures/lilun.eps>
 (epstopdf)             \includegraphics on input line 342.
 Package epstopdf Info: Output file is already uptodate.
-<figures/lilun-eps-converted-to.pdf, id=84, 361.35pt x 252.945pt>
+
+<figures/lilun-eps-converted-to.pdf, id=79, 361.35pt x 252.945pt>
 File: figures/lilun-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/lilun-eps-converted-to.pdf>
 Package pdftex.def Info: figures/lilun-eps-converted-to.pdf used on input line 
 342.
 (pdftex.def)             Requested size: 216.81168pt x 151.76816pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 Package epstopdf Info: Source file: <figures/2nodea.eps>
 (epstopdf)                    date: 2018-06-20 10:01:17
 (epstopdf)                    size: 27317 bytes
@@ -543,7 +535,8 @@ Package epstopdf Info: Source file: <figures/2nodea.eps>
 ed-to.pdf figures/2nodea.eps>
 (epstopdf)             \includegraphics on input line 355.
 Package epstopdf Info: Output file is already uptodate.
-<figures/2nodea-eps-converted-to.pdf, id=85, 361.35pt x 252.945pt>
+
+<figures/2nodea-eps-converted-to.pdf, id=80, 361.35pt x 252.945pt>
 File: figures/2nodea-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/2nodea-eps-converted-to.pdf>
@@ -561,7 +554,7 @@ ed-to.pdf figures/2nodeb.eps>
 (epstopdf)             \includegraphics on input line 360.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/2nodeb-eps-converted-to.pdf, id=86, 361.35pt x 252.945pt>
+<figures/2nodeb-eps-converted-to.pdf, id=81, 361.35pt x 252.945pt>
 File: figures/2nodeb-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/2nodeb-eps-converted-to.pdf>
@@ -579,7 +572,7 @@ ed-to.pdf figures/2nodec.eps>
 (epstopdf)             \includegraphics on input line 365.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/2nodec-eps-converted-to.pdf, id=87, 361.35pt x 252.945pt>
+<figures/2nodec-eps-converted-to.pdf, id=82, 361.35pt x 252.945pt>
 File: figures/2nodec-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/2nodec-eps-converted-to.pdf>
@@ -597,7 +590,7 @@ ed-to.pdf figures/2noded.eps>
 (epstopdf)             \includegraphics on input line 370.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/2noded-eps-converted-to.pdf, id=88, 361.35pt x 252.945pt>
+<figures/2noded-eps-converted-to.pdf, id=83, 361.35pt x 252.945pt>
 File: figures/2noded-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/2noded-eps-converted-to.pdf>
@@ -608,7 +601,8 @@ Package pdftex.def Info: figures/2noded-eps-converted-to.pdf used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/3scen.pdf, id=89, 796.9775pt x 597.23125pt>
+[4 <./figures/2scen.pdf> <./figures/lilun-eps-converted-to.pdf>]
+<figures/3scen.pdf, id=109, 796.9775pt x 597.23125pt>
 File: figures/3scen.pdf Graphic file (type pdf)
  <use figures/3scen.pdf>
 Package pdftex.def Info: figures/3scen.pdf used on input line 392.
@@ -627,7 +621,7 @@ Package epstopdf Info: Source file: <figures/3nodea.eps>
 ed-to.pdf figures/3nodea.eps>
 (epstopdf)             \includegraphics on input line 412.
 Package epstopdf Info: Output file is already uptodate.
-<figures/3nodea-eps-converted-to.pdf, id=90, 361.35pt x 252.945pt>
+<figures/3nodea-eps-converted-to.pdf, id=110, 361.35pt x 252.945pt>
 File: figures/3nodea-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/3nodea-eps-converted-to.pdf>
@@ -645,7 +639,7 @@ ed-to.pdf figures/3nodeb.eps>
 (epstopdf)             \includegraphics on input line 417.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/3nodeb-eps-converted-to.pdf, id=91, 361.35pt x 252.945pt>
+<figures/3nodeb-eps-converted-to.pdf, id=111, 361.35pt x 252.945pt>
 File: figures/3nodeb-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/3nodeb-eps-converted-to.pdf>
@@ -663,7 +657,7 @@ ed-to.pdf figures/3nodec.eps>
 (epstopdf)             \includegraphics on input line 422.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/3nodec-eps-converted-to.pdf, id=92, 361.35pt x 252.945pt>
+<figures/3nodec-eps-converted-to.pdf, id=112, 361.35pt x 252.945pt>
 File: figures/3nodec-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/3nodec-eps-converted-to.pdf>
@@ -681,7 +675,7 @@ ed-to.pdf figures/3noded.eps>
 (epstopdf)             \includegraphics on input line 427.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/3noded-eps-converted-to.pdf, id=93, 361.35pt x 252.945pt>
+<figures/3noded-eps-converted-to.pdf, id=113, 361.35pt x 252.945pt>
 File: figures/3noded-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/3noded-eps-converted-to.pdf>
@@ -692,7 +686,9 @@ Package pdftex.def Info: figures/3noded-eps-converted-to.pdf used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(./wcsp.bbl [4])
+[5 <./figures/2nodea-eps-converted-to.pdf> <./figures/2nodeb-eps-converted-to.p
+df> <./figures/2nodec-eps-converted-to.pdf> <./figures/2noded-eps-converted-to.
+pdf> <./figures/3scen.pdf>] (./wcsp.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -704,37 +700,32 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5 <./figures/2scen.pdf> <./figures/lilun-eps-converted-to.pdf>] [6
-
- <./figures/2nodea-eps-converted-to.pdf> <./figures/2nodeb-eps-converted-to.pdf
-> <./figures/2nodec-eps-converted-to.pdf> <./figures/2noded-eps-converted-to.pd
-f> <./figures/3scen.pdf>] [7 <./figures/3nodea-eps-converted-to.pdf> <./figures
-/3nodeb-eps-converted-to.pdf> <./figures/3nodec-eps-converted-to.pdf> <./figure
-s/3noded-eps-converted-to.pdf>] (./wcsp.aux) ) 
+[6 <./figures/3nodea-eps-converted-to.pdf> <./figures/3nodeb-eps-converted-to.p
+df> <./figures/3nodec-eps-converted-to.pdf> <./figures/3noded-eps-converted-to.
+pdf>] (./wcsp.aux) ) 
 Here is how much of TeX's memory you used:
  4684 strings out of 494497
- 68306 string characters out of 6172401
+ 68281 string characters out of 6172401
  138055 words of memory out of 5000000
  8017 multiletter control sequences out of 15000+600000
  41174 words of font info for 88 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  38i,11n,35p,950b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fo
-nts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
-es/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-
-Output written on wcsp.pdf (7 pages, 350376 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on wcsp.pdf (6 pages, 345134 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 146 compressed objects within 2 object streams
+ 214 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

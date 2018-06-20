@@ -71,7 +71,7 @@ In this section, the protocol model is introduced. Contention-based carrier sens
 
 Assuming that underwater nodes can overhear the transmission of the others, CSMA/CA is applied to maximum the usage of the channel. The detailed flow is illustrated in \ref{f1}. 
 \begin{figure}[ht]
-	\centerline{\includegraphics[scale=0.15]{figures/1.pdf}}
+	\centerline{\includegraphics[scale=0.12]{figures/1.pdf}}
 	\caption{Illustration of CSMA/CA}
 	\label{f1}
 \end{figure}
@@ -106,7 +106,7 @@ The BCT frame also plays an important role in load-adaptive data transmission mc
 
 In the low-load mode, the transmission flow is the same as fig.\ref{f1}. While in the high-load mode, two data frames will be transmitted after one handshaking as fig.\ref{ll} shows. The interframe space between two data frames chooses SIFS, the minimum space which gives the following frame highest priority. The deferring time, NAV, needs to be extended to make room for one more data frame and a SIFS time. 
 \begin{figure}[ht]
-	\centerline{\includegraphics[scale=0.14]{figures/2.pdf}}
+	\centerline{\includegraphics[scale=0.12]{figures/2.pdf}}
 	\caption{transmission flow in high-load mode}
 	\label{ll}
 \end{figure}
@@ -135,7 +135,7 @@ $\overline U$ denotes expected time for transmitting useful data, $\overline B$ 
 In LACC-M protocol，there are two circumstances where collisions will happen. The first one is caused by RTS frames sent by hidden terminals. As shown in fig.\ref{fig:example}, mobile node 2 is in the communication range of static node 1 and static node 3. Node 3, out of range of node 1, is node 1's hidden terminal. When node 1 interacts with node 2, the RTS frame caused by node 3 will influence node 2's receiving of node 1's RTS frame or DATA frame. The second circumstance is caused by the BCT frames sent periodically by mobile nodes. Mobile nodes other than node 2 send BCT frames periodically, which may cause collisions if node 1 is receiving CTS or ACK frame from node 2.
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[scale=0.1]{figures/hidden.pdf}
+	\includegraphics[scale=0.1]{figures/6.pdf}
 	\caption{
 		hidden terminal problem
 	}
@@ -426,7 +426,7 @@ The utilization ratio of the channel is improved with the addition of the mobile
 	\end{minipage}
 	}
 	
-	\caption{performance comparison with three mobile nodes}    
+	\caption{performance comparisons with three mobile nodes}    
     \label{fig:2}                                                 
 \end{figure*}                                                 
 
